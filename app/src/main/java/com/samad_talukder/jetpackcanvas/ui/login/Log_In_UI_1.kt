@@ -54,6 +54,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.samad_talukder.jetpackcanvas.R
+import com.samad_talukder.jetpackcanvas.components.CustomEditText
+import com.samad_talukder.jetpackcanvas.components.SocialLoginBtn
 
 @Composable
 fun LogInUI_1() {
@@ -150,32 +152,15 @@ fun MobileNoInputField() {
             )
         )
         Spacer(modifier = Modifier.height(10.dp))
-        TextField(
-            value = mobileNo,
-            onValueChange = {
-                mobileNo = it
-            },
-            singleLine = true,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 20.dp),
-            colors = TextFieldDefaults.textFieldColors(
-                containerColor = Color(0xFFF7F7F7),
-                focusedIndicatorColor = Color.Transparent,
-                unfocusedIndicatorColor = Color.Transparent,
-                textColor = Color(0xFF000000),
-                placeholderColor = Color(0xFF8B8B97)
-            ),
-            shape = RoundedCornerShape(8.dp),
-            keyboardOptions = KeyboardOptions(
-                keyboardType = KeyboardType.Number,
-                imeAction = ImeAction.Done,
-                autoCorrect = false,
-            ),
-            keyboardActions = KeyboardActions(onDone = null),
-            placeholder = { Text(text = "01XXXXXXX") },
-        )
 
+        CustomEditText(
+            value = mobileNo,
+            onValueChange = { mobileNo = it },
+            placeHolderText = "01XXXXXXX",
+            containerColor = Color(0xFFF7F7F7),
+            textColor = Color(0xFF000000),
+            placeholderColorColor = Color(0xFF8B8B97),
+        )
     }
 }
 
@@ -297,75 +282,27 @@ fun LoginButton() {
 @Composable
 fun SocialLoginButton() {
     Row(
-        horizontalArrangement = Arrangement.Center,
-        verticalAlignment = Alignment.Top,
+        verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 20.dp)
     ) {
 
-        Row(
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier
-                .width(165.dp)
-                .height(56.dp)
-                .border(
-                    width = 1.dp,
-                    color = Color(0xFFDD4B39),
-                    shape = RoundedCornerShape(size = 11.dp)
-                )
-        ) {
-            Image(
-                painter = painterResource(id = R.drawable.ic_google_sign_in),
-                contentDescription = "image description",
-                contentScale = ContentScale.None
-            )
-            Spacer(modifier = Modifier.width(14.dp))
-            Text(
-                text = "Google",
-                style = TextStyle(
-                    fontSize = 16.sp,
-                    lineHeight = 16.sp,
-                    fontFamily = FontFamily(Font(R.font.gilroy_bold)),
-                    fontWeight = FontWeight(400),
-                    color = Color(0xFFDD4B39),
-                    letterSpacing = 0.8.sp,
-                )
-            )
-        }
+        SocialLoginBtn(
+            icon = R.drawable.ic_google_sign_in,
+            socialMediaName = "Facebook",
+            modifier = Modifier.weight(1f),
+            isGoogle = true,
+        )
+
         Spacer(modifier = Modifier.width(20.dp))
 
-        Row(
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier
-                .width(174.dp)
-                .height(56.dp)
-                .border(
-                    width = 1.dp,
-                    color = Color(0xFF333333),
-                    shape = RoundedCornerShape(size = 11.dp)
-                )
-        ) {
-            Image(
-                painter = painterResource(id = R.drawable.ic_apple_sign_in),
-                contentDescription = "image description",
-                contentScale = ContentScale.None
-            )
-            Spacer(modifier = Modifier.width(14.dp))
-            Text(
-                text = "Apple",
-                style = TextStyle(
-                    fontSize = 16.sp,
-                    lineHeight = 16.sp,
-                    fontFamily = FontFamily(Font(R.font.gilroy_bold)),
-                    fontWeight = FontWeight(400),
-                    color = Color(0xFF16162E),
-                    letterSpacing = 0.8.sp,
-                )
-            )
-        }
+        SocialLoginBtn(
+            icon = R.drawable.ic_apple_sign_in,
+            socialMediaName = "Apple",
+            modifier = Modifier.weight(1f),
+            isGoogle = false,
+        )
 
 
     }
