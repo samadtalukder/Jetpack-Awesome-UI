@@ -227,7 +227,7 @@ fun PasswordInputField() {
         )
 
         Text(
-            text = "Forget Password?",
+            text = "Forgot Password?",
             modifier = Modifier
                 .padding(top = 8.dp, end = 20.dp)
                 .fillMaxWidth(),
