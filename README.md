@@ -27,6 +27,7 @@ Android app and save your time on designing layouts. You can check more UI desig
 ## Screenshot
 ### 1.  Login Screen
 <img src="https://github.com/samadtalukder/Jetpack-Awesome-UI/blob/compose/v1/screenshots/Login_Screen_1.png" heigth="400" width="250"/>
+<img src="https://github.com/samadtalukder/Jetpack-Awesome-UI/blob/compose/v1/screenshots/Login_Screen_2.png" heigth="400" width="250"/>
 
 
 
