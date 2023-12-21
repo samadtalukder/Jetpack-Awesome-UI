@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import com.samad_talukder.jetpackcanvas.ui.button.PlayDifferentTypesOfBtn
 import com.samad_talukder.jetpackcanvas.ui.login.LogInUI_1
 import com.samad_talukder.jetpackcanvas.ui.login.LogInUI_2
 import com.samad_talukder.jetpackcanvas.ui.theme.JetpackCanvasTheme

@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -34,11 +35,14 @@ fun CustomEditText(
     containerColor: Color,
     textColor: Color,
     placeholderColorColor: Color,
+    roundedCornerShape: RoundedCornerShape,
+    visualTransformation: VisualTransformation = VisualTransformation.None,
+    trailingIcon: @Composable (() -> Unit)? = null,
 ) {
 
     TextField(
         value = value,
-        onValueChange = { onValueChange },
+        onValueChange = { onValueChange(it) },
         singleLine = isSingleLine,
         modifier = modifier
             .fillMaxWidth()
@@ -50,12 +54,15 @@ fun CustomEditText(
             textColor = textColor,
             placeholderColor = placeholderColorColor
         ),
-        shape = RoundedCornerShape(8.dp),
+        shape = roundedCornerShape,
         keyboardOptions = KeyboardOptions(
             keyboardType = keyboardType,
             imeAction = imeAction,
             autoCorrect = autoCorrect,
         ),
+        visualTransformation = visualTransformation,
         placeholder = { Text(text = placeHolderText) },
+        trailingIcon = { trailingIcon?.invoke() },
+
     )
 }

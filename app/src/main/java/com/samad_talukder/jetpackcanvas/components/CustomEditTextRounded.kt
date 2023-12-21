@@ -52,6 +52,7 @@ fun CustomEditTextRounded(
                 BorderStroke(width = 1.dp, color = Color(0xFFF1F1F4)),
                 shape = RoundedCornerShape(30.dp)
             ),
+        shape = RoundedCornerShape(30.dp),
         colors = TextFieldDefaults.textFieldColors(
             containerColor = containerColor,
             focusedIndicatorColor = Color.Transparent,
