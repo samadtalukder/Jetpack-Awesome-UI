@@ -1,8 +1,6 @@
 package com.samad_talukder.jetpackcanvas.ui.login
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -15,8 +13,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.KeyboardActions
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Icon
 import androidx.compose.material.icons.Icons
@@ -24,12 +20,9 @@ import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -39,13 +32,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
@@ -54,7 +45,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.samad_talukder.jetpackcanvas.R
+import com.samad_talukder.jetpackcanvas.components.CustomBreak
 import com.samad_talukder.jetpackcanvas.components.CustomEditText
+import com.samad_talukder.jetpackcanvas.components.CustomImage
+import com.samad_talukder.jetpackcanvas.components.CustomText
 import com.samad_talukder.jetpackcanvas.components.SocialLoginBtn
 
 @Composable
@@ -94,39 +88,37 @@ fun HeaderTitleWithIcon() {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Image(
-            painter = painterResource(id = R.drawable.ic_cart_logo_with_color),
-            contentDescription = "image description",
-            contentScale = ContentScale.None,
+
+        CustomImage(
+            imgSrc = R.drawable.ic_cart_logo_with_color,
             modifier = Modifier
                 .padding(top = 30.dp)
                 .width(120.dp)
                 .height(120.dp)
         )
-        Spacer(modifier = Modifier.height(30.dp))
-        Text(
-            text = "Welcome to our", style = TextStyle(
-                fontSize = 24.sp,
-                fontFamily = FontFamily(Font(R.font.gilroy_bold)),
-                fontWeight = FontWeight(400),
-                color = Color(0xFF16162E),
-                textAlign = TextAlign.Center,
-            )
+
+        CustomBreak(height = 30.dp)
+
+        CustomText(
+            value = stringResource(id = R.string.welcome_to_our),
+            textColor = Color(0xFF16162E),
+            fontFamily = FontFamily(Font(R.font.gilroy_bold)),
+            fontWeight = FontWeight(400),
+            textAlign = TextAlign.Center,
+            fontSize = 24.sp
         )
 
-        Text(
-            text = "E-Grocery", style = TextStyle(
-                fontSize = 24.sp,
-                fontFamily = FontFamily(Font(R.font.gilroy_bold)),
-                fontWeight = FontWeight(400),
-                color = Color(0xFF048F6E),
-                textAlign = TextAlign.Center,
-            )
+        CustomText(
+            value = stringResource(id = R.string.e_grocery),
+            textColor = Color(0xFF048F6E),
+            fontFamily = FontFamily(Font(R.font.gilroy_bold)),
+            fontWeight = FontWeight(400),
+            textAlign = TextAlign.Center,
+            fontSize = 24.sp
         )
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MobileNoInputField() {
     var mobileNo by remember {
@@ -139,7 +131,7 @@ fun MobileNoInputField() {
     ) {
 
         Text(
-            text = "Mobile No",
+            text = stringResource(id = R.string.mobile_no),
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 20.dp),
@@ -160,11 +152,12 @@ fun MobileNoInputField() {
             containerColor = Color(0xFFF7F7F7),
             textColor = Color(0xFF000000),
             placeholderColorColor = Color(0xFF8B8B97),
+            roundedCornerShape = RoundedCornerShape(8.dp),
+            keyboardType = KeyboardType.Phone
         )
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PasswordInputField() {
     var password by remember {
@@ -180,7 +173,7 @@ fun PasswordInputField() {
     ) {
 
         Text(
-            text = "Password",
+            text = stringResource(id = R.string.password),
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 20.dp),
@@ -193,23 +186,16 @@ fun PasswordInputField() {
             )
         )
         Spacer(modifier = Modifier.height(10.dp))
-        TextField(
+
+        CustomEditText(
             value = password,
-            onValueChange = {
-                password = it
-            },
-            singleLine = true,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 20.dp),
-            colors = TextFieldDefaults.textFieldColors(
-                containerColor = Color(0xFFF7F7F7),
-                focusedIndicatorColor = Color.Transparent,
-                unfocusedIndicatorColor = Color.Transparent,
-                placeholderColor = Color(0xFF8B8B97)
-            ),
-            visualTransformation = if (isPasswordVisible) VisualTransformation.None else PasswordVisualTransformation(),
-            shape = RoundedCornerShape(8.dp),
+            onValueChange = { password = it },
+            placeHolderText = stringResource(id = R.string.password_hint_text),
+            containerColor = Color(0xFFF7F7F7),
+            textColor = Color(0xFF000000),
+            placeholderColorColor = Color(0xFF8B8B97),
+            roundedCornerShape = RoundedCornerShape(8.dp),
+            keyboardType = KeyboardType.Password,
             trailingIcon = {
                 val image =
                     if (isPasswordVisible) Icons.Filled.Visibility else Icons.Filled.VisibilityOff
@@ -217,17 +203,12 @@ fun PasswordInputField() {
                     Icon(imageVector = image, contentDescription = "")
                 }
             },
-            keyboardOptions = KeyboardOptions(
-                keyboardType = KeyboardType.Password,
-                imeAction = ImeAction.Done,
-                autoCorrect = false,
-            ),
-            keyboardActions = KeyboardActions(onDone = null),
-            placeholder = { Text(text = "*****") },
+            visualTransformation = if (isPasswordVisible) VisualTransformation.None else PasswordVisualTransformation()
+
         )
 
         Text(
-            text = "Forget Password?",
+            text = stringResource(id = R.string.forgot_password),
             modifier = Modifier
                 .padding(top = 8.dp, end = 20.dp)
                 .fillMaxWidth(),
@@ -264,7 +245,7 @@ fun LoginButton() {
             )
         ) {
             Text(
-                text = "Login",
+                text = stringResource(id = R.string.login),
                 style = TextStyle(
                     fontSize = 16.sp,
                     lineHeight = 16.sp,
@@ -290,7 +271,7 @@ fun SocialLoginButton() {
 
         SocialLoginBtn(
             icon = R.drawable.ic_google_sign_in,
-            socialMediaName = "Facebook",
+            socialMediaName = stringResource(id = R.string.google),
             modifier = Modifier.weight(1f),
             isGoogle = true,
         )
@@ -299,7 +280,7 @@ fun SocialLoginButton() {
 
         SocialLoginBtn(
             icon = R.drawable.ic_apple_sign_in,
-            socialMediaName = "Apple",
+            socialMediaName = stringResource(id = R.string.apple),
             modifier = Modifier.weight(1f),
             isGoogle = false,
         )
@@ -312,7 +293,7 @@ fun SocialLoginButton() {
 fun SingUpButton() {
     Row {
         Text(
-            text = "Don’t Have Account?",
+            text = stringResource(id = R.string.dont_have_account),
             style = TextStyle(
                 fontSize = 14.sp,
                 fontFamily = FontFamily(Font(R.font.gilroy_medium)),
@@ -322,7 +303,7 @@ fun SingUpButton() {
         )
         Spacer(modifier = Modifier.width(6.dp))
         Text(
-            text = "Sign up",
+            text = stringResource(id = R.string.sign_up),
             style = TextStyle(
                 fontSize = 14.sp,
                 fontFamily = FontFamily(Font(R.font.gilroy_bold)),
