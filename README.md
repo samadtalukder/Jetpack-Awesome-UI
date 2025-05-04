@@ -26,20 +26,10 @@ Android app and save your time on designing layouts. You can check more UI desig
 
 ## Screenshot
 ### 1.  Login Screen
-<img src="https://github.com/samadtalukder/Jetpack-Awesome-UI/blob/compose/v1/screenshots/Login_Screen_1.png" heigth="400" width="250"/>
-<img src="https://github.com/samadtalukder/Jetpack-Awesome-UI/blob/compose/v1/screenshots/Login_Screen_2.png" heigth="400" width="250"/>
-
-
-
-**Libraries in use:**
-1. material
-2. material3
-
-**Fonts**
-1. [Poppins](https://fonts.google.com/specimen/Poppins)
-
-## Contributors ✨
-1. [Afnan Abdullah - UI/UX Designer](https://www.linkedin.com/in/abdullah-afnan-0009)
+<p align="center">
+  <img src="https://github.com/samadtalukder/Jetpack-Awesome-UI/blob/compose/v1/screenshots/Login_Screen_1.png" alt="Image 1" width="25%" />
+  <img src="https://github.com/samadtalukder/Jetpack-Awesome-UI/blob/compose/v1/screenshots/Login_Screen_2.png" alt="Image 2" width="25%" />
+</p>
 
 ## Sources
 1. [Dribble](https://dribbble.com/)
