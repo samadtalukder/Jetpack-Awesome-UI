@@ -18,9 +18,11 @@ import androidx.compose.material.icons.filled.CreditCard
 import androidx.compose.material.icons.filled.Dashboard
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.DensityMedium
+import androidx.compose.material.icons.filled.Details
 import androidx.compose.material.icons.filled.Downloading
 import androidx.compose.material.icons.filled.Expand
 import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.FilterAlt
 import androidx.compose.material.icons.filled.FormatUnderlined
 import androidx.compose.material.icons.filled.GridView
 import androidx.compose.material.icons.filled.HelpOutline
@@ -31,14 +33,17 @@ import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.MilitaryTech
 import androidx.compose.material.icons.filled.Navigation
 import androidx.compose.material.icons.filled.NewLabel
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Payment
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.RadioButtonChecked
 import androidx.compose.material.icons.filled.Repartition
+import androidx.compose.material.icons.filled.Reviews
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Segment
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material.icons.filled.ShoppingCartCheckout
 import androidx.compose.material.icons.filled.Slideshow
 import androidx.compose.material.icons.filled.SmartButton
 import androidx.compose.material.icons.filled.SmartDisplay
@@ -102,10 +107,6 @@ object CommonFunc {
                         title = "Sample 1",
                         route = SplashSample1.route
                     ),
-                    HomeCategoryItem(
-                        title = "Sample 2",
-                        route = SplashSample1.route
-                    )
                 ),
                 //initiallyExpanded = true
             ),
@@ -385,13 +386,6 @@ object CommonFunc {
             ),
 
             HomeCategory(
-                id = "cart",
-                title = "Shopping Cart",
-                icon = Icons.Default.ShoppingCart,
-                items = emptyList()
-            ),
-
-            HomeCategory(
                 id = "settings",
                 title = "Settings",
                 icon = Icons.Default.Settings,
@@ -406,6 +400,20 @@ object CommonFunc {
             ),
 
             HomeCategory(
+                id = "cart",
+                title = "Shopping Cart",
+                icon = Icons.Default.ShoppingCart,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "checkout",
+                title = "Checkout",
+                icon = Icons.Default.ShoppingCartCheckout,
+                items = emptyList()
+            ),
+
+            HomeCategory(
                 id = "payment",
                 title = "Payment",
                 icon = Icons.Default.Payment,
@@ -416,6 +424,34 @@ object CommonFunc {
                 id = "dashboard",
                 title = "Dashboard",
                 icon = Icons.Default.Dashboard,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "notification",
+                title = "Notifications",
+                icon = Icons.Default.Notifications,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "reviews",
+                title = "Reviews",
+                icon = Icons.Default.Reviews,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "filters",
+                title = "Filters",
+                icon = Icons.Default.FilterAlt,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "details",
+                title = "Details",
+                icon = Icons.Default.Details,
                 items = emptyList()
             ),
 
