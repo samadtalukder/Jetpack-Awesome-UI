@@ -1,0 +1,444 @@
+/**
+ *  Copyright (C) 2025. Samad Talukder (https://github.com/samadtalukder/)
+ */
+package com.samad_talukder.jetpackcanvas.utils
+
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccessTimeFilled
+import androidx.compose.material.icons.filled.Animation
+import androidx.compose.material.icons.filled.Aod
+import androidx.compose.material.icons.filled.AppRegistration
+import androidx.compose.material.icons.filled.Apps
+import androidx.compose.material.icons.filled.Article
+import androidx.compose.material.icons.filled.AutoAwesomeMotion
+import androidx.compose.material.icons.filled.Bookmark
+import androidx.compose.material.icons.filled.BookmarkBorder
+import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.CreditCard
+import androidx.compose.material.icons.filled.Dashboard
+import androidx.compose.material.icons.filled.DateRange
+import androidx.compose.material.icons.filled.DensityMedium
+import androidx.compose.material.icons.filled.Downloading
+import androidx.compose.material.icons.filled.Expand
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.FormatUnderlined
+import androidx.compose.material.icons.filled.GridView
+import androidx.compose.material.icons.filled.HelpOutline
+import androidx.compose.material.icons.filled.HideImage
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.MilitaryTech
+import androidx.compose.material.icons.filled.Navigation
+import androidx.compose.material.icons.filled.NewLabel
+import androidx.compose.material.icons.filled.Payment
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.RadioButtonChecked
+import androidx.compose.material.icons.filled.Repartition
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Segment
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material.icons.filled.Slideshow
+import androidx.compose.material.icons.filled.SmartButton
+import androidx.compose.material.icons.filled.SmartDisplay
+import androidx.compose.material.icons.filled.SwipeLeft
+import androidx.compose.material.icons.filled.Tab
+import androidx.compose.material.icons.filled.TextFields
+import androidx.compose.material.icons.filled.ToggleOn
+import androidx.compose.material.icons.filled.Tune
+import androidx.compose.material.icons.filled.Verified
+import androidx.compose.material.icons.filled.VideoChat
+import androidx.compose.material.icons.filled.ViewCarousel
+import androidx.compose.material.icons.filled.ViewSidebar
+import androidx.compose.material.icons.filled.WaterDrop
+import androidx.compose.material.icons.filled.Widgets
+import com.samad_talukder.jetpackcanvas.data.models.BottomNavItem
+import com.samad_talukder.jetpackcanvas.data.models.HomeCategory
+import com.samad_talukder.jetpackcanvas.data.models.HomeCategoryItem
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.SplashSample1
+
+object CommonFunc {
+    fun getNavigationItems(): List<BottomNavItem> {
+        return listOf(
+            BottomNavItem(
+                title = "Screens",
+                selectedIcon = Icons.Default.Widgets,
+                icon = Icons.Default.Widgets,
+                route = AppRoute.BottomScreens.route
+            ),
+            BottomNavItem(
+                title = "Apps",
+                selectedIcon = Icons.Default.Apps,
+                icon = Icons.Default.Apps,
+                route = AppRoute.BottomApps.route
+            ),
+            BottomNavItem(
+                title = "Bookmark",
+                selectedIcon = Icons.Default.Bookmark,
+                icon = Icons.Default.BookmarkBorder,
+                route = AppRoute.BottomFavorites.route,
+                badgeCount = 5
+            ),
+            BottomNavItem(
+                title = "Settings",
+                selectedIcon = Icons.Default.Settings,
+                icon = Icons.Default.Settings,
+                route = AppRoute.BottomSettings.route
+            )
+        )
+    }
+
+    fun getHomeCategories(): List<HomeCategory> {
+        return listOf(
+            HomeCategory(
+                id = "splash",
+                title = "Splash",
+                isNew = true,
+                icon = Icons.Default.WaterDrop,
+                items = listOf(
+                    HomeCategoryItem(
+                        title = "Sample 1",
+                        route = SplashSample1.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Sample 2",
+                        route = SplashSample1.route
+                    )
+                ),
+                //initiallyExpanded = true
+            ),
+
+            HomeCategory(
+                id = "onboard",
+                title = "Onboard",
+                icon = Icons.Default.SwipeLeft,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "badges",
+                title = "Badges",
+                icon = Icons.Default.MilitaryTech,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "bottom_app_bar",
+                title = "Bottom App Bar",
+                icon = Icons.Default.Dashboard,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "bottom_app_bar",
+                title = "Bottom Navigation",
+                icon = Icons.Default.Navigation,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "nav_bar",
+                title = "Navigation Bar",
+                icon = Icons.Default.Segment,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "nav_rail",
+                title = "Navigation Rail",
+                icon = Icons.Default.ViewSidebar,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "bottom_sheet",
+                title = "Bottom Sheet",
+                icon = Icons.Default.ExpandLess,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "buttons",
+                title = "Buttons",
+                icon = Icons.Default.SmartButton,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "radio_button",
+                title = "Radio Button",
+                icon = Icons.Default.RadioButtonChecked,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "checkbox",
+                title = "Checkbox",
+                icon = Icons.Default.CheckCircle,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "switch",
+                title = "Switch",
+                icon = Icons.Default.ToggleOn,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "cards",
+                title = "Cards",
+                icon = Icons.Default.CreditCard,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "carousel",
+                title = "Carousel",
+                icon = Icons.Default.ViewCarousel,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "chips",
+                title = "Chips",
+                icon = Icons.Default.NewLabel,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "date_pickers",
+                title = "Date Pickers",
+                icon = Icons.Default.DateRange,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "dialogs",
+                title = "Dialogs",
+                icon = Icons.Default.Info,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "animation",
+                title = "Animation",
+                icon = Icons.Default.Animation,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "motion",
+                title = "Motion",
+                icon = Icons.Default.AutoAwesomeMotion,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "expansion_panels",
+                title = "Expansion Panels",
+                icon = Icons.Default.Expand,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "divider",
+                title = "Divider",
+                icon = Icons.Default.FormatUnderlined,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "grids",
+                title = "Grids",
+                icon = Icons.Default.GridView,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "list",
+                title = "Lists",
+                icon = Icons.Default.List,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "menus",
+                title = "Menus",
+                icon = Icons.Default.Segment,
+                items = emptyList()
+            ),
+
+
+            HomeCategory(
+                id = "progress_indicator",
+                title = "Progress Indicator",
+                icon = Icons.Default.Downloading,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "search",
+                title = "Search",
+                icon = Icons.Default.Search,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "side_sheets",
+                title = "Side Sheets",
+                icon = Icons.Default.Slideshow,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "sliders",
+                title = "Sliders",
+                icon = Icons.Default.Tune,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "snackbar",
+                title = "Snackbars & Toasts",
+                icon = Icons.Default.Info,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "tabs",
+                title = "Tabs",
+                icon = Icons.Default.Tab,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "text_fields",
+                title = "Text Fields",
+                icon = Icons.Default.TextFields,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "toolbars",
+                title = "Toolbars",
+                icon = Icons.Default.DensityMedium,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "time_pickers",
+                title = "Time Pickers",
+                icon = Icons.Default.AccessTimeFilled,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "tooltips",
+                title = "Tooltips",
+                icon = Icons.Default.HelpOutline,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "top_app_bar",
+                title = "Top App Bar",
+                icon = Icons.Default.AppRegistration,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "auth",
+                title = "Authentication",
+                icon = Icons.Default.Lock,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "profile",
+                title = "Profile",
+                icon = Icons.Default.Person,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "no_item",
+                title = "No Item",
+                icon = Icons.Default.HideImage,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "player",
+                title = "Player",
+                icon = Icons.Default.SmartDisplay,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "timeline",
+                title = "Timeline",
+                icon = Icons.Default.Repartition,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "cart",
+                title = "Shopping Cart",
+                icon = Icons.Default.ShoppingCart,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "settings",
+                title = "Settings",
+                icon = Icons.Default.Settings,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "verification",
+                title = "Verification",
+                icon = Icons.Default.Verified,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "payment",
+                title = "Payment",
+                icon = Icons.Default.Payment,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "dashboard",
+                title = "Dashboard",
+                icon = Icons.Default.Dashboard,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "article",
+                title = "Article",
+                icon = Icons.Default.Article,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "chat",
+                title = "Chat",
+                icon = Icons.Default.VideoChat,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "about",
+                title = "About",
+                icon = Icons.Default.Aod,
+                items = emptyList()
+            ),
+        )
+    }
+}

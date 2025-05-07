@@ -53,10 +53,14 @@ fun JetpackCanvasTheme(
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }
+
     val view = LocalView.current
+    val activity = view.context as Activity
+    val window = activity.window
+
     if (!view.isInEditMode) {
         SideEffect {
-            val window = (view.context as Activity).window
+
             window.statusBarColor = colorScheme.primary.toArgb()
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
         }

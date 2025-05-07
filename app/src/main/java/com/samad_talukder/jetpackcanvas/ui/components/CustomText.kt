@@ -1,42 +1,45 @@
-package com.samad_talukder.jetpackcanvas.components
+/**
+ *  Copyright (C) 2025. Samad Talukder (https://github.com/samadtalukder/)
+ */
+package com.samad_talukder.jetpackcanvas.ui.components
 
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import com.samad_talukder.jetpackcanvas.ui.theme.GilroyFont
 
 @Composable
 fun CustomText(
-    value: String,
     modifier: Modifier = Modifier,
-    isSingleLine: Boolean = false,
-    textColor: Color,
-    fontSize: TextUnit = 12.sp,
-    fontFamily: FontFamily,
-    fontWeight: FontWeight = FontWeight(400),
-    textAlign: TextAlign = TextAlign.Start,
+    text: String,
+    textColor: Color = Color.Unspecified,
     textDecoration: TextDecoration = TextDecoration.None,
+    fontSize: TextUnit = MaterialTheme.typography.bodyMedium.fontSize,
+    fontWeight: FontWeight = FontWeight.Normal,
+    textAlign: TextAlign = TextAlign.Start,
+    maxLine:Int = 1,
+    overflow: TextOverflow = TextOverflow.Visible
 ) {
     Text(
-        text = value,
+        text = text,
         modifier = modifier,
         style = TextStyle(
             color = textColor,
             fontSize = fontSize,
-            fontFamily = fontFamily,
+            fontFamily = GilroyFont,
             fontWeight = fontWeight,
             textAlign = textAlign,
             textDecoration = textDecoration,
-        )
+        ),
+        maxLines = maxLine,
+        overflow = overflow
     )
 }
