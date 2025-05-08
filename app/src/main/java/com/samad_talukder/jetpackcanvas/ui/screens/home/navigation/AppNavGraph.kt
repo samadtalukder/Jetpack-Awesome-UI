@@ -14,6 +14,9 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.CenterAlignedTop
 import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.CustomTopAppBarScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.LargeTopAppBarScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.MediumTopAppBarScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.BasicCardScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.FilledCardScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.OutlinedCardScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.login.LogInUI_1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.material.AlertDialogExample
 import com.samad_talukder.jetpackcanvas.utils.bottomNavGraph
@@ -46,6 +49,19 @@ fun AppNavGraph(
 
         composable(AppRoute.LargeAppBar.route) {
             LargeTopAppBarScreen()
+        }
+
+        // Cards Screens
+        composable(AppRoute.BasicCard.route) {
+            BasicCardScreen()
+        }
+
+        composable(AppRoute.FilledCard.route) {
+            FilledCardScreen()
+        }
+
+        composable(AppRoute.OutlinedCard.route) {
+            OutlinedCardScreen()
         }
 
         // Dialog Screens

@@ -76,11 +76,14 @@ import com.samad_talukder.jetpackcanvas.data.models.BottomNavItem
 import com.samad_talukder.jetpackcanvas.data.models.HomeCategory
 import com.samad_talukder.jetpackcanvas.data.models.HomeCategoryItem
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CenterAlignedTopAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CustomTopAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogAlert
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LargeAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.MediumAppBar
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OutlinedCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.SplashSample1
 
 object CommonFunc {
@@ -187,8 +190,23 @@ object CommonFunc {
             HomeCategory(
                 id = "cards",
                 title = "Cards",
+                isNew = true,
                 icon = Icons.Default.CreditCard,
-                items = emptyList()
+                items = listOf(
+                    HomeCategoryItem(
+                        title = "Basic",
+                        route = BasicCard.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Filled",
+                        route = FilledCard.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Outlined",
+                        route = OutlinedCard.route
+                    ),
+
+                ),
             ),
 
             HomeCategory(

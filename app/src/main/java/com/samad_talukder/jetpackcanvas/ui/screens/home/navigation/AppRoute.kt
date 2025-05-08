@@ -33,6 +33,16 @@ sealed class AppRoute (val route: String){
     @Serializable
     object LargeAppBar : AppRoute("large_app_bar")
 
+    // Card Demo
+    @Serializable
+    object BasicCard : AppRoute("basic_card")
+
+    @Serializable
+    object FilledCard : AppRoute("filled_card")
+
+    @Serializable
+    object OutlinedCard : AppRoute("outlined_card")
+
     // Splash Route
     @Serializable
     object SplashSample1 : AppRoute("splash_sample_1")
