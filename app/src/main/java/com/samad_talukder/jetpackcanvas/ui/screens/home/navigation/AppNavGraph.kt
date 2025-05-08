@@ -10,6 +10,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.CenterAlignedTopAppBarScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.CustomTopAppBarScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.LargeTopAppBarScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.MediumTopAppBarScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.login.LogInUI_1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.material.AlertDialogExample
 import com.samad_talukder.jetpackcanvas.utils.bottomNavGraph
@@ -27,13 +31,34 @@ fun AppNavGraph(
         // Bottom Navigation Screens
         bottomNavGraph(navController)
 
+        // App Bar Screens
+        composable(AppRoute.CustomTopAppBar.route) {
+            CustomTopAppBarScreen()
+        }
+
+        composable(AppRoute.CenterAlignedTopAppBar.route) {
+            CenterAlignedTopAppBarScreen()
+        }
+
+        composable(AppRoute.MediumAppBar.route) {
+            MediumTopAppBarScreen()
+        }
+
+        composable(AppRoute.LargeAppBar.route) {
+            LargeTopAppBarScreen()
+        }
+
+        // Dialog Screens
+        composable(AppRoute.DialogAlert.route) {
+            AlertDialogExample()
+        }
+
+        // Splash Screens
         composable(AppRoute.SplashSample1.route) {
             LogInUI_1()
         }
 
-        composable(AppRoute.DialogAlert.route) {
-            AlertDialogExample()
-        }
+
 
     }
 }

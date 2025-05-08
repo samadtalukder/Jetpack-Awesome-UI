@@ -20,6 +20,19 @@ sealed class AppRoute (val route: String){
     @Serializable
     object BottomSettings : AppRoute("bottom_settings")
 
+    // App Bar Route
+    @Serializable
+    object CustomTopAppBar : AppRoute("custom_top_app_bar")
+
+    @Serializable
+    object CenterAlignedTopAppBar : AppRoute("center_aligned_top_app_bar")
+
+    @Serializable
+    object MediumAppBar : AppRoute("medium_app_bar")
+
+    @Serializable
+    object LargeAppBar : AppRoute("large_app_bar")
+
     // Splash Route
     @Serializable
     object SplashSample1 : AppRoute("splash_sample_1")

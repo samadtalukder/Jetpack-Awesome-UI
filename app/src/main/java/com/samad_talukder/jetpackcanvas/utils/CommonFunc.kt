@@ -76,7 +76,11 @@ import com.samad_talukder.jetpackcanvas.data.models.BottomNavItem
 import com.samad_talukder.jetpackcanvas.data.models.HomeCategory
 import com.samad_talukder.jetpackcanvas.data.models.HomeCategoryItem
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CenterAlignedTopAppBar
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CustomTopAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogAlert
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LargeAppBar
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.MediumAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.SplashSample1
 
 object CommonFunc {
@@ -123,7 +127,25 @@ object CommonFunc {
                 id = "app_bars",
                 title = "App Bars",
                 icon = Icons.Default.AppRegistration,
-                items = emptyList()
+                isNew = true,
+                items = listOf(
+                    HomeCategoryItem(
+                        title = "Custom Top App Bar",
+                        route = CustomTopAppBar.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Center Aligned Top App Bar",
+                        route = CenterAlignedTopAppBar.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Medium Top App Bar",
+                        route = MediumAppBar.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Large Top App Bar",
+                        route = LargeAppBar.route
+                    ),
+                ),
             ),
 
             HomeCategory(
@@ -207,6 +229,7 @@ object CommonFunc {
             HomeCategory(
                 id = "dialogs",
                 title = "Dialogs",
+                isNew = true,
                 icon = Icons.Default.Info,
                 items = listOf(
                     HomeCategoryItem(
