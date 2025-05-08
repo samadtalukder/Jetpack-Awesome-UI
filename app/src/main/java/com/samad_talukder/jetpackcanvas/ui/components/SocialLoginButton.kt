@@ -1,4 +1,7 @@
-package com.samad_talukder.jetpackcanvas.components
+/**
+ *  Copyright (C) 2025. Samad Talukder (https://github.com/samadtalukder/)
+ */
+package com.samad_talukder.jetpackcanvas.ui.components
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
@@ -20,9 +23,11 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.samad_talukder.jetpackcanvas.R
+import com.samad_talukder.jetpackcanvas.ui.screens.home.login.SocialLoginButton
 
 @Composable
 fun SocialLoginBtn(
@@ -61,4 +66,10 @@ fun SocialLoginBtn(
             )
         )
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun PreviewSocialLoginButton() {
+    SocialLoginButton()
 }
