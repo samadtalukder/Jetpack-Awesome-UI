@@ -78,6 +78,7 @@ import com.samad_talukder.jetpackcanvas.data.models.HomeCategoryItem
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CenterAlignedTopAppBar
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ConstraintLayoutBasic
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CustomTopAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogAlert
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledCard
@@ -205,7 +206,6 @@ object CommonFunc {
                         title = "Outlined",
                         route = OutlinedCard.route
                     ),
-
                 ),
             ),
 
@@ -302,8 +302,14 @@ object CommonFunc {
             HomeCategory(
                 id = "layout",
                 title = "Layout",
+                isNew = true,
                 icon = Icons.Default.Layers,
-                items = emptyList()
+                items = listOf(
+                    HomeCategoryItem(
+                        title = "Constraint Layout Basic",
+                        route = ConstraintLayoutBasic.route
+                    ),
+                ),
             ),
 
             HomeCategory(

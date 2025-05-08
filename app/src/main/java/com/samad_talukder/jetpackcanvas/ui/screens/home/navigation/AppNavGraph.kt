@@ -17,6 +17,7 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.MediumTopAppBarS
 import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.BasicCardScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.FilledCardScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.OutlinedCardScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.layout.ConstraintLayoutBasicScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.login.LogInUI_1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.material.AlertDialogExample
 import com.samad_talukder.jetpackcanvas.utils.bottomNavGraph
@@ -64,6 +65,12 @@ fun AppNavGraph(
             OutlinedCardScreen()
         }
 
+        // Layout Screens
+        composable(AppRoute.ConstraintLayoutBasic.route) {
+            ConstraintLayoutBasicScreen()
+        }
+
+
         // Dialog Screens
         composable(AppRoute.DialogAlert.route) {
             AlertDialogExample()
@@ -73,7 +80,6 @@ fun AppNavGraph(
         composable(AppRoute.SplashSample1.route) {
             LogInUI_1()
         }
-
 
 
     }

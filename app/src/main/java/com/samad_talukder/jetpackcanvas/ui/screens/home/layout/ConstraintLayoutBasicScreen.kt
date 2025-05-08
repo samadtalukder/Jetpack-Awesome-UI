@@ -1,18 +1,19 @@
-package com.samad_talukder.jetpackcanvas.layout
+/**
+ *  Copyright (C) 2025. Samad Talukder (https://github.com/samadtalukder/)
+ */
+package com.samad_talukder.jetpackcanvas.ui.screens.home.layout
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -31,47 +32,7 @@ import androidx.constraintlayout.compose.Dimension
 import com.samad_talukder.jetpackcanvas.R
 
 @Composable
-fun ConstraintLayoutExample() {
-    Column {
-
-        //ConstraintLayoutListItem()
-
-        //Spacer(modifier = Modifier.height(20.dp))
-
-        ConstraintLayoutDesign()
-    }
-}
-
-@Composable
-fun ConstraintLayoutListItem() {
-    ConstraintLayout {
-        val (button, text) = createRefs()
-        Button(
-            onClick = {},
-            modifier = Modifier.constrainAs(button) {
-                top.linkTo(parent.top, margin = 16.dp)
-            }
-
-        ) {
-            Text(text = "Click Me")
-        }
-
-        Text(
-            text = "Test Me",
-            modifier = Modifier.constrainAs(text) {
-                top.linkTo(button.bottom, margin = 16.dp)
-            })
-    }
-}
-
-@Preview(showSystemUi = true)
-@Composable
-private fun ConstraintLayoutPreview() {
-    ConstraintLayoutExample()
-}
-
-@Composable
-fun ConstraintLayoutDesign() {
+fun ConstraintLayoutBasicScreen() {
     ConstraintLayout(
         modifier = Modifier
             .background(MaterialTheme.colorScheme.surface)
@@ -155,7 +116,8 @@ fun ConstraintLayoutDesign() {
             }
         )
 
-        Text(text = "How is it going today?",
+        Text(
+            text = "How is it going today?",
             color = Color.Gray,
             modifier = Modifier.constrainAs(askingMsg) {
                 top.linkTo(greetingMsg.bottom, 16.dp)
@@ -203,7 +165,8 @@ fun ConstraintLayoutDesign() {
             }
         ) {}
 
-        Text(text = "Our services",
+        Text(
+            text = "Our services",
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.onSurface,
@@ -252,7 +215,8 @@ fun ConstraintLayoutDesign() {
                 .size(50.dp)
         )
 
-        Text(text = "Consultation",
+        Text(
+            text = "Consultation",
             fontWeight = FontWeight.SemiBold,
             modifier = Modifier.constrainAs(consultationText) {
                 top.linkTo(consultationIcon.bottom, 12.dp)
@@ -261,7 +225,8 @@ fun ConstraintLayoutDesign() {
             }
         )
 
-        Text(text = "Medicines",
+        Text(
+            text = "Medicines",
             fontWeight = FontWeight.SemiBold,
             modifier = Modifier.constrainAs(medicinesText) {
                 top.linkTo(consultationText.top)
@@ -270,7 +235,8 @@ fun ConstraintLayoutDesign() {
             }
         )
 
-        Text(text = "Ambulance",
+        Text(
+            text = "Ambulance",
             fontWeight = FontWeight.SemiBold,
             modifier = Modifier.constrainAs(ambulanceText) {
                 top.linkTo(consultationText.top)
@@ -289,7 +255,8 @@ fun ConstraintLayoutDesign() {
             appointmentDoctorBranch
         ) = createRefs()
 
-        Text(text = "Appointment",
+        Text(
+            text = "Appointment",
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.onSurface,
@@ -298,7 +265,8 @@ fun ConstraintLayoutDesign() {
                 start.linkTo(startGuideLine)
             }
         )
-        Text(text = "See All",
+        Text(
+            text = "See All",
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
             color = Color.Blue,
@@ -331,7 +299,8 @@ fun ConstraintLayoutDesign() {
             }*/
         }
 
-        Text(text = "Appointment date",
+        Text(
+            text = "Appointment date",
             color = Color.Gray,
             modifier = Modifier.constrainAs(appointmentDateText) {
                 top.linkTo(appointmentItemCard.top, 16.dp)
@@ -350,7 +319,8 @@ fun ConstraintLayoutDesign() {
                 .size(24.dp)
         )
 
-        Text(text = "Mon Nov 7 | 8:00 - 8:30 AM",
+        Text(
+            text = "Mon Nov 7 | 8:00 - 8:30 AM",
             fontSize = 16.sp,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.onSurface,
@@ -372,9 +342,7 @@ fun ConstraintLayoutDesign() {
                 .size(30.dp)
         )
 
-        Divider(
-            color = Color.Gray,
-            thickness = (0.5f).dp,
+        HorizontalDivider(
             modifier = Modifier
                 .constrainAs(appointmentDivider) {
                     top.linkTo(appointmentDate.bottom, margin = 16.dp)
@@ -382,8 +350,9 @@ fun ConstraintLayoutDesign() {
                     end.linkTo(appointmentOptions.end)
                     width = Dimension.fillToConstraints
                 }
-                .alpha(0.5f)
-        )
+                .alpha(0.5f),
+            thickness = (0.5f).dp,
+            color = Color.Gray)
 
         Image(
             painter = painterResource(id = R.drawable.ic_apple_sign_in),
@@ -396,7 +365,8 @@ fun ConstraintLayoutDesign() {
                 .size(40.dp)
         )
 
-        Text(text = "Dr. Rıdvan TORU",
+        Text(
+            text = "Dr. Rıdvan TORU",
             fontSize = 16.sp,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.onSurface,
@@ -405,7 +375,8 @@ fun ConstraintLayoutDesign() {
                 start.linkTo(appointmentDoctorProfileImage.end, 12.dp)
             }
         )
-        Text(text = "Dentist",
+        Text(
+            text = "Dentist",
             fontSize = 14.sp,
             fontWeight = FontWeight.Bold,
             color = Color.Gray,
@@ -417,3 +388,10 @@ fun ConstraintLayoutDesign() {
 
     }
 }
+
+@Preview
+@Composable
+private fun PreviewConstraintLayoutBasicScreen() {
+    ConstraintLayoutBasicScreen()
+}
+

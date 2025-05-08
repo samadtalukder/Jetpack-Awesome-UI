@@ -6,7 +6,7 @@ package com.samad_talukder.jetpackcanvas.ui.screens.home.navigation
 import kotlinx.serialization.Serializable
 
 @Serializable
-sealed class AppRoute (val route: String){
+sealed class AppRoute(val route: String) {
     // Bottom Nav Route
     @Serializable
     object BottomScreens : AppRoute("bottom_screens")
@@ -42,6 +42,10 @@ sealed class AppRoute (val route: String){
 
     @Serializable
     object OutlinedCard : AppRoute("outlined_card")
+
+    // Layout Demo
+    @Serializable
+    object ConstraintLayoutBasic : AppRoute("constraint_layout_basic")
 
     // Splash Route
     @Serializable
