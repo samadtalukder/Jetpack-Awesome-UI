@@ -76,6 +76,7 @@ import com.samad_talukder.jetpackcanvas.data.models.BottomNavItem
 import com.samad_talukder.jetpackcanvas.data.models.HomeCategory
 import com.samad_talukder.jetpackcanvas.data.models.HomeCategoryItem
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogAlert
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.SplashSample1
 
 object CommonFunc {
@@ -207,7 +208,12 @@ object CommonFunc {
                 id = "dialogs",
                 title = "Dialogs",
                 icon = Icons.Default.Info,
-                items = emptyList()
+                items = listOf(
+                    HomeCategoryItem(
+                        title = "Alert Dialog",
+                        route = DialogAlert.route
+                    ),
+                ),
             ),
 
             HomeCategory(

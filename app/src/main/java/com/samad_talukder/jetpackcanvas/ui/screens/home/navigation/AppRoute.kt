@@ -24,4 +24,8 @@ sealed class AppRoute (val route: String){
     @Serializable
     object SplashSample1 : AppRoute("splash_sample_1")
 
+    // Dialog Route
+    @Serializable
+    object DialogAlert : AppRoute("dialog_alert")
+
 }
