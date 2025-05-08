@@ -4,31 +4,42 @@
 package com.samad_talukder.jetpackcanvas.utils
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Article
+import androidx.compose.material.icons.automirrored.filled.HelpOutline
+import androidx.compose.material.icons.automirrored.filled.Segment
+import androidx.compose.material.icons.automirrored.filled.ViewSidebar
 import androidx.compose.material.icons.filled.AccessTimeFilled
+import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.Animation
 import androidx.compose.material.icons.filled.Aod
 import androidx.compose.material.icons.filled.AppRegistration
 import androidx.compose.material.icons.filled.Apps
-import androidx.compose.material.icons.filled.Article
+import androidx.compose.material.icons.filled.ArrowDropDownCircle
 import androidx.compose.material.icons.filled.AutoAwesomeMotion
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
+import androidx.compose.material.icons.filled.CheckBoxOutlineBlank
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.CreditCard
 import androidx.compose.material.icons.filled.Dashboard
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.DensityMedium
 import androidx.compose.material.icons.filled.Details
+import androidx.compose.material.icons.filled.DevicesOther
 import androidx.compose.material.icons.filled.Downloading
+import androidx.compose.material.icons.filled.DragHandle
 import androidx.compose.material.icons.filled.Expand
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.FilterAlt
+import androidx.compose.material.icons.filled.FormatColorText
+import androidx.compose.material.icons.filled.FormatShapes
 import androidx.compose.material.icons.filled.FormatUnderlined
-import androidx.compose.material.icons.filled.GridView
-import androidx.compose.material.icons.filled.HelpOutline
 import androidx.compose.material.icons.filled.HideImage
+import androidx.compose.material.icons.filled.HorizontalSplit
+import androidx.compose.material.icons.filled.HourglassTop
+import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.filled.Layers
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.MilitaryTech
 import androidx.compose.material.icons.filled.Navigation
@@ -37,10 +48,10 @@ import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Payment
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.RadioButtonChecked
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Repartition
 import androidx.compose.material.icons.filled.Reviews
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Segment
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material.icons.filled.ShoppingCartCheckout
@@ -52,10 +63,13 @@ import androidx.compose.material.icons.filled.Tab
 import androidx.compose.material.icons.filled.TextFields
 import androidx.compose.material.icons.filled.ToggleOn
 import androidx.compose.material.icons.filled.Tune
+import androidx.compose.material.icons.filled.Update
 import androidx.compose.material.icons.filled.Verified
 import androidx.compose.material.icons.filled.VideoChat
 import androidx.compose.material.icons.filled.ViewCarousel
-import androidx.compose.material.icons.filled.ViewSidebar
+import androidx.compose.material.icons.filled.ViewColumn
+import androidx.compose.material.icons.filled.ViewComfy
+import androidx.compose.material.icons.filled.ViewInAr
 import androidx.compose.material.icons.filled.WaterDrop
 import androidx.compose.material.icons.filled.Widgets
 import com.samad_talukder.jetpackcanvas.data.models.BottomNavItem
@@ -98,23 +112,16 @@ object CommonFunc {
     fun getHomeCategories(): List<HomeCategory> {
         return listOf(
             HomeCategory(
-                id = "splash",
-                title = "Splash",
-                isNew = true,
-                icon = Icons.Default.WaterDrop,
-                items = listOf(
-                    HomeCategoryItem(
-                        title = "Sample 1",
-                        route = SplashSample1.route
-                    ),
-                ),
-                //initiallyExpanded = true
+                id = "animation",
+                title = "Animation",
+                icon = Icons.Default.Animation,
+                items = emptyList()
             ),
 
             HomeCategory(
-                id = "onboard",
-                title = "Onboard",
-                icon = Icons.Default.SwipeLeft,
+                id = "app_bars",
+                title = "App Bars",
+                icon = Icons.Default.AppRegistration,
                 items = emptyList()
             ),
 
@@ -125,31 +132,11 @@ object CommonFunc {
                 items = emptyList()
             ),
 
-            HomeCategory(
-                id = "bottom_app_bar",
-                title = "Bottom App Bar",
-                icon = Icons.Default.Dashboard,
-                items = emptyList()
-            ),
 
             HomeCategory(
-                id = "bottom_app_bar",
+                id = "bottom_nav",
                 title = "Bottom Navigation",
                 icon = Icons.Default.Navigation,
-                items = emptyList()
-            ),
-
-            HomeCategory(
-                id = "nav_bar",
-                title = "Navigation Bar",
-                icon = Icons.Default.Segment,
-                items = emptyList()
-            ),
-
-            HomeCategory(
-                id = "nav_rail",
-                title = "Navigation Rail",
-                icon = Icons.Default.ViewSidebar,
                 items = emptyList()
             ),
 
@@ -161,30 +148,16 @@ object CommonFunc {
             ),
 
             HomeCategory(
+                id = "box",
+                title = "Box",
+                icon = Icons.Default.CheckBoxOutlineBlank,
+                items = emptyList()
+            ),
+
+            HomeCategory(
                 id = "buttons",
                 title = "Buttons",
                 icon = Icons.Default.SmartButton,
-                items = emptyList()
-            ),
-
-            HomeCategory(
-                id = "radio_button",
-                title = "Radio Button",
-                icon = Icons.Default.RadioButtonChecked,
-                items = emptyList()
-            ),
-
-            HomeCategory(
-                id = "checkbox",
-                title = "Checkbox",
-                icon = Icons.Default.CheckCircle,
-                items = emptyList()
-            ),
-
-            HomeCategory(
-                id = "switch",
-                title = "Switch",
-                icon = Icons.Default.ToggleOn,
                 items = emptyList()
             ),
 
@@ -203,6 +176,13 @@ object CommonFunc {
             ),
 
             HomeCategory(
+                id = "checkbox",
+                title = "Checkbox",
+                icon = Icons.Default.CheckCircle,
+                items = emptyList()
+            ),
+
+            HomeCategory(
                 id = "chips",
                 title = "Chips",
                 icon = Icons.Default.NewLabel,
@@ -210,8 +190,15 @@ object CommonFunc {
             ),
 
             HomeCategory(
+                id = "column",
+                title = "Column",
+                icon = Icons.Default.ViewColumn,
+                items = emptyList()
+            ),
+
+            HomeCategory(
                 id = "date_pickers",
-                title = "Date Pickers",
+                title = "Date Picker",
                 icon = Icons.Default.DateRange,
                 items = emptyList()
             ),
@@ -224,16 +211,23 @@ object CommonFunc {
             ),
 
             HomeCategory(
-                id = "animation",
-                title = "Animation",
-                icon = Icons.Default.Animation,
+                id = "divider",
+                title = "Divider",
+                icon = Icons.Default.FormatUnderlined,
                 items = emptyList()
             ),
 
             HomeCategory(
-                id = "motion",
-                title = "Motion",
-                icon = Icons.Default.AutoAwesomeMotion,
+                id = "draggable",
+                title = "Draggable",
+                icon = Icons.Default.DragHandle,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "dropdown_menu",
+                title = "Dropdown Menu",
+                icon = Icons.Default.ArrowDropDownCircle,
                 items = emptyList()
             ),
 
@@ -245,33 +239,81 @@ object CommonFunc {
             ),
 
             HomeCategory(
-                id = "divider",
-                title = "Divider",
-                icon = Icons.Default.FormatUnderlined,
+                id = "fab",
+                title = "Floating Action Button",
+                icon = Icons.Default.AddCircle,
                 items = emptyList()
             ),
 
             HomeCategory(
-                id = "grids",
-                title = "Grids",
-                icon = Icons.Default.GridView,
+                id = "image",
+                title = "Images & Icons",
+                icon = Icons.Default.Image,
                 items = emptyList()
             ),
 
             HomeCategory(
-                id = "list",
-                title = "Lists",
-                icon = Icons.Default.List,
+                id = "layout",
+                title = "Layout",
+                icon = Icons.Default.Layers,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "list_column",
+                title = "List (Column, Row & Grid)",
+                icon = Icons.Default.ViewComfy,
                 items = emptyList()
             ),
 
             HomeCategory(
                 id = "menus",
                 title = "Menus",
-                icon = Icons.Default.Segment,
+                icon = Icons.AutoMirrored.Filled.Segment,
                 items = emptyList()
             ),
 
+            HomeCategory(
+                id = "modifiers",
+                title = "Modifiers",
+                icon = Icons.Filled.Update,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "motion",
+                title = "Motion",
+                icon = Icons.Default.AutoAwesomeMotion,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "nav_bar",
+                title = "Navigation Bar",
+                icon = Icons.AutoMirrored.Filled.Segment,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "nav_drawer",
+                title = "Navigation Drawer",
+                icon = Icons.Filled.DensityMedium,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "nav_rail",
+                title = "Navigation Rail",
+                icon = Icons.AutoMirrored.Filled.ViewSidebar,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "popups",
+                title = "Popups",
+                icon = Icons.Filled.HourglassTop,
+                items = emptyList()
+            ),
 
             HomeCategory(
                 id = "progress_indicator",
@@ -281,9 +323,37 @@ object CommonFunc {
             ),
 
             HomeCategory(
+                id = "radio_button",
+                title = "Radio Button",
+                icon = Icons.Default.RadioButtonChecked,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "row",
+                title = "Row",
+                icon = Icons.Default.HorizontalSplit,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "scaffold",
+                title = "Scaffold",
+                icon = Icons.Default.DevicesOther,
+                items = emptyList()
+            ),
+
+            HomeCategory(
                 id = "search",
-                title = "Search",
+                title = "Search Bar",
                 icon = Icons.Default.Search,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "shapes",
+                title = "Shape & Images",
+                icon = Icons.Default.FormatShapes,
                 items = emptyList()
             ),
 
@@ -303,15 +373,43 @@ object CommonFunc {
 
             HomeCategory(
                 id = "snackbar",
-                title = "Snackbars & Toasts",
+                title = "Snackbars",
                 icon = Icons.Default.Info,
                 items = emptyList()
             ),
 
             HomeCategory(
+                id = "surface",
+                title = "Surface",
+                icon = Icons.Default.ViewInAr,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "swipe_refresh",
+                title = "Swipe to Refresh",
+                icon = Icons.Default.Refresh,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "switch",
+                title = "Switches",
+                icon = Icons.Default.ToggleOn,
+                items = emptyList()
+            ),
+
+            HomeCategory(
                 id = "tabs",
-                title = "Tabs",
+                title = "Tabs (Segmented button)",
                 icon = Icons.Default.Tab,
+                items = emptyList()
+            ),
+
+            HomeCategory(
+                id = "text_typo",
+                title = "Text & Typography",
+                icon = Icons.Default.FormatColorText,
                 items = emptyList()
             ),
 
@@ -323,15 +421,8 @@ object CommonFunc {
             ),
 
             HomeCategory(
-                id = "toolbars",
-                title = "Toolbars",
-                icon = Icons.Default.DensityMedium,
-                items = emptyList()
-            ),
-
-            HomeCategory(
                 id = "time_pickers",
-                title = "Time Pickers",
+                title = "Time Picker",
                 icon = Icons.Default.AccessTimeFilled,
                 items = emptyList()
             ),
@@ -339,14 +430,28 @@ object CommonFunc {
             HomeCategory(
                 id = "tooltips",
                 title = "Tooltips",
-                icon = Icons.Default.HelpOutline,
+                icon = Icons.AutoMirrored.Filled.HelpOutline,
                 items = emptyList()
             ),
 
+
             HomeCategory(
-                id = "top_app_bar",
-                title = "Top App Bar",
-                icon = Icons.Default.AppRegistration,
+                id = "splash",
+                title = "Splash",
+                isNew = true,
+                icon = Icons.Default.WaterDrop,
+                items = listOf(
+                    HomeCategoryItem(
+                        title = "Sample 1",
+                        route = SplashSample1.route
+                    ),
+                ),
+            ),
+
+            HomeCategory(
+                id = "onboard",
+                title = "Onboard",
+                icon = Icons.Default.SwipeLeft,
                 items = emptyList()
             ),
 
@@ -458,7 +563,7 @@ object CommonFunc {
             HomeCategory(
                 id = "article",
                 title = "Article",
-                icon = Icons.Default.Article,
+                icon = Icons.AutoMirrored.Filled.Article,
                 items = emptyList()
             ),
 
