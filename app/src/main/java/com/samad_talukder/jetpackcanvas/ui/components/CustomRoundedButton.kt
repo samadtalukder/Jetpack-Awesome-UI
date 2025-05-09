@@ -1,6 +1,8 @@
-package com.samad_talukder.jetpackcanvas.components
+/**
+ *  Copyright (C) 2025. Samad Talukder (https://github.com/samadtalukder/)
+ */
+package com.samad_talukder.jetpackcanvas.ui.components
 
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
