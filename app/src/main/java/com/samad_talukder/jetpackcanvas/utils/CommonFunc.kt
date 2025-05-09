@@ -75,12 +75,17 @@ import androidx.compose.material.icons.filled.Widgets
 import com.samad_talukder.jetpackcanvas.data.models.BottomNavItem
 import com.samad_talukder.jetpackcanvas.data.models.HomeCategory
 import com.samad_talukder.jetpackcanvas.data.models.HomeCategoryItem
+import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.DialogWithTextScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CenterAlignedTopAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ConstraintLayoutBasic
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CustomTopAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogAlert
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogBasic
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogWithImageAndText
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogWithText
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogWithTextField
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LargeAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.MediumAppBar
@@ -250,6 +255,22 @@ object CommonFunc {
                 isNew = true,
                 icon = Icons.Default.Info,
                 items = listOf(
+                    HomeCategoryItem(
+                        title = "Dialog Basic",
+                        route = DialogBasic.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Dialog With Text",
+                        route = DialogWithText.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Dialog With Text and Image",
+                        route = DialogWithImageAndText.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Dialog With TextField",
+                        route = DialogWithTextField.route
+                    ),
                     HomeCategoryItem(
                         title = "Alert Dialog",
                         route = DialogAlert.route

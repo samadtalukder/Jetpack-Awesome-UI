@@ -53,6 +53,18 @@ sealed class AppRoute(val route: String) {
 
     // Dialog Route
     @Serializable
+    object DialogBasic : AppRoute("dialog_basic")
+
+    @Serializable
+    object DialogWithText : AppRoute("dialog_text")
+
+    @Serializable
+    object DialogWithImageAndText : AppRoute("dialog_image_text")
+
+    @Serializable
+    object DialogWithTextField : AppRoute("dialog_text_field")
+
+    @Serializable
     object DialogAlert : AppRoute("dialog_alert")
 
 }

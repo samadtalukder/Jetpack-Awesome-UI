@@ -19,7 +19,11 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.FilledCardScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.OutlinedCardScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.layout.ConstraintLayoutBasicScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.login.LogInUI_1
-import com.samad_talukder.jetpackcanvas.ui.screens.home.material.AlertDialogExample
+import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.AlertDialogExample
+import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.DialogBasicScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.DialogWithImageAndTextScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.DialogWithTextFieldScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.DialogWithTextScreen
 import com.samad_talukder.jetpackcanvas.utils.bottomNavGraph
 
 @Composable
@@ -72,6 +76,22 @@ fun AppNavGraph(
 
 
         // Dialog Screens
+        composable(AppRoute.DialogBasic.route) {
+            DialogBasicScreen()
+        }
+
+        composable(AppRoute.DialogWithText.route) {
+            DialogWithTextScreen()
+        }
+
+        composable(AppRoute.DialogWithImageAndText.route) {
+            DialogWithImageAndTextScreen()
+        }
+
+        composable(AppRoute.DialogWithTextField.route) {
+            DialogWithTextFieldScreen()
+        }
+
         composable(AppRoute.DialogAlert.route) {
             AlertDialogExample()
         }
