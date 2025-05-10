@@ -75,8 +75,8 @@ import androidx.compose.material.icons.filled.Widgets
 import com.samad_talukder.jetpackcanvas.data.models.BottomNavItem
 import com.samad_talukder.jetpackcanvas.data.models.HomeCategory
 import com.samad_talukder.jetpackcanvas.data.models.HomeCategoryItem
-import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.DialogWithTextScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CenterAlignedTopAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ConstraintLayoutBasic
@@ -86,11 +86,18 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Dial
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogWithImageAndText
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogWithText
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogWithTextField
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ElevatedBtn
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FABtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledCard
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledTonalBtn
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledTonalIconBtn
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.IconBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LargeAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.MediumAppBar
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OutlinedBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OutlinedCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.SplashSample1
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.TextBtn
 
 object CommonFunc {
     fun getNavigationItems(): List<BottomNavItem> {
@@ -189,8 +196,42 @@ object CommonFunc {
             HomeCategory(
                 id = "buttons",
                 title = "Buttons",
+                isNew = true,
                 icon = Icons.Default.SmartButton,
-                items = emptyList()
+                items = listOf(
+                    HomeCategoryItem(
+                        title = "Basic Button",
+                        route = BasicBtn.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Elevated Button",
+                        route = ElevatedBtn.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Filled Tonal Button",
+                        route = FilledTonalBtn.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Filled Tonal Icon Button",
+                        route = FilledTonalIconBtn.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Floating Action Button",
+                        route = FABtn.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Icon Button",
+                        route = IconBtn.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Outlined Button",
+                        route = OutlinedBtn.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Text Button",
+                        route = TextBtn.route
+                    ),
+                )
             ),
 
             HomeCategory(

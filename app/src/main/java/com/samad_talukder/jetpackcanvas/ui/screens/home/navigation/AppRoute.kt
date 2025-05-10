@@ -33,6 +33,31 @@ sealed class AppRoute(val route: String) {
     @Serializable
     object LargeAppBar : AppRoute("large_app_bar")
 
+    // Button Demo
+    @Serializable
+    object BasicBtn : AppRoute("basic_btn")
+
+    @Serializable
+    object FilledTonalBtn : AppRoute("filled_tonal_btn")
+
+    @Serializable
+    object FilledTonalIconBtn : AppRoute("filled_tonal_icon_btn")
+
+    @Serializable
+    object FABtn : AppRoute("fa_btn")
+
+    @Serializable
+    object ElevatedBtn : AppRoute("elevated_btn")
+
+    @Serializable
+    object IconBtn : AppRoute("icon_btn")
+
+    @Serializable
+    object OutlinedBtn : AppRoute("outlined_btn")
+
+    @Serializable
+    object TextBtn : AppRoute("text_btn")
+
     // Card Demo
     @Serializable
     object BasicCard : AppRoute("basic_card")
