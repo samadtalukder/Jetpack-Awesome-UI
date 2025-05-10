@@ -93,6 +93,8 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Fill
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledTonalIconBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.IconBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LargeAppBar
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LogIn1
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LogIn2
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.MediumAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OutlinedBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OutlinedCard
@@ -574,7 +576,16 @@ object CommonFunc {
                 id = "auth",
                 title = "Authentication",
                 icon = Icons.Default.Lock,
-                items = emptyList()
+                items = listOf(
+                    HomeCategoryItem(
+                        title = "Log In Sample 1",
+                        route = LogIn1.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Log In Sample 2",
+                        route = LogIn2.route
+                    ),
+                ),
             ),
 
             HomeCategory(

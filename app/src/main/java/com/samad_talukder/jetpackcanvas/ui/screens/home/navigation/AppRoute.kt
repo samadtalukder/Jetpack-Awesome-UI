@@ -72,10 +72,6 @@ sealed class AppRoute(val route: String) {
     @Serializable
     object ConstraintLayoutBasic : AppRoute("constraint_layout_basic")
 
-    // Splash Route
-    @Serializable
-    object SplashSample1 : AppRoute("splash_sample_1")
-
     // Dialog Route
     @Serializable
     object DialogBasic : AppRoute("dialog_basic")
@@ -91,5 +87,16 @@ sealed class AppRoute(val route: String) {
 
     @Serializable
     object DialogAlert : AppRoute("dialog_alert")
+
+    // Splash Route
+    @Serializable
+    object SplashSample1 : AppRoute("splash_sample_1")
+
+    // Login Route
+    @Serializable
+    object LogIn1 : AppRoute("login_1")
+
+    @Serializable
+    object LogIn2 : AppRoute("login_2")
 
 }

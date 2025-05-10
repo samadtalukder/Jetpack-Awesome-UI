@@ -27,12 +27,14 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.BasicCardScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.FilledCardScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.OutlinedCardScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.layout.ConstraintLayoutBasicScreen
-import com.samad_talukder.jetpackcanvas.ui.screens.home.login.LogInUI_1
+import com.samad_talukder.jetpackcanvas.ui.screens.home.login.LogInScreen1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.AlertDialogExample
 import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.DialogBasicScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.DialogWithImageAndTextScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.DialogWithTextFieldScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.DialogWithTextScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.login.LogInScreen2
+import com.samad_talukder.jetpackcanvas.ui.screens.home.splash.SplashScreen1
 import com.samad_talukder.jetpackcanvas.utils.bottomNavGraph
 import com.samad_talukder.jetpackcanvas.utils.showToast
 
@@ -70,7 +72,7 @@ fun AppNavGraph(
 
         // Button Components Screen
         composable(AppRoute.BasicBtn.route) {
-            BasicButtonScreen{ context.showToast("Hello!") }
+            BasicButtonScreen { context.showToast("Hello!") }
         }
         composable(AppRoute.FilledTonalBtn.route) {
             FilledTonalButtonScreen { context.showToast("Hello") }
@@ -79,19 +81,19 @@ fun AppNavGraph(
             FilledTonalIconButtonScreen { context.showToast("Hello") }
         }
         composable(AppRoute.FABtn.route) {
-            FloatingActionButtonScreen{ context.showToast("Hello!") }
+            FloatingActionButtonScreen { context.showToast("Hello!") }
         }
         composable(AppRoute.ElevatedBtn.route) {
-            ElevatedButtonScreen{ context.showToast("Hello!") }
+            ElevatedButtonScreen { context.showToast("Hello!") }
         }
         composable(AppRoute.IconBtn.route) {
-            IconButtonScreen{ context.showToast("Hello!") }
+            IconButtonScreen { context.showToast("Hello!") }
         }
         composable(AppRoute.OutlinedBtn.route) {
             OutlinedButtonScreen { context.showToast("Hello!") }
         }
         composable(AppRoute.TextBtn.route) {
-            TextButtonScreen{ context.showToast("Hello!") }
+            TextButtonScreen { context.showToast("Hello!") }
         }
 
         // Cards Screens
@@ -111,7 +113,6 @@ fun AppNavGraph(
         composable(AppRoute.ConstraintLayoutBasic.route) {
             ConstraintLayoutBasicScreen()
         }
-
 
         // Dialog Screens
         composable(AppRoute.DialogBasic.route) {
@@ -136,7 +137,15 @@ fun AppNavGraph(
 
         // Splash Screens
         composable(AppRoute.SplashSample1.route) {
-            LogInUI_1()
+            SplashScreen1()
+        }
+
+        // Login Screens
+        composable(AppRoute.LogIn1.route) {
+            LogInScreen1()
+        }
+        composable(AppRoute.LogIn2.route) {
+            LogInScreen2()
         }
 
 
