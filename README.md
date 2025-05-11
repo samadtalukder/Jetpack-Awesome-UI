@@ -98,8 +98,8 @@ ease.
 
 | 📋 Screens                                                     | 🧩 Components                                             | 🎞️ Apps                                                                  |
 |----------------------------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------------------------|
-| <img src="screenshots/home-1.png" width="200"/>        | <img src="screenshots/button-1.png" width="200"/> | <img src="screenshots/login_Screen-1.png" width="200"/> |
-| <img src="screenshots/home-2.png" width="200"/>        | <img src="screenshots/text-1.png" width="200"/>   | <img src="screenshots/login_Screen-2.png" width="200"/> |
+| <img src="screenshots/home-1.png" width="200"/>        | <img src="screenshots/button-1.png" width="200"/> | <img src="screenshots/login_screen-1.png" width="200"/> |
+| <img src="screenshots/home-2.png" width="200"/>        | <img src="screenshots/text-1.png" width="200"/>   | <img src="screenshots/login_screen-2.png" width="200"/> |
 
 
 ### 🏗️ Build & Run
