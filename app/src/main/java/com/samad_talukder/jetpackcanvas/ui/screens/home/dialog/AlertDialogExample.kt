@@ -1,7 +1,7 @@
 /**
  *  Copyright (C) 2025. Samad Talukder (https://github.com/samadtalukder/)
  */
-package com.samad_talukder.jetpackcanvas.ui.screens.home.material
+package com.samad_talukder.jetpackcanvas.ui.screens.home.dialog
 
 
 import androidx.compose.foundation.layout.Arrangement

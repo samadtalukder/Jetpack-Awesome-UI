@@ -33,6 +33,31 @@ sealed class AppRoute(val route: String) {
     @Serializable
     object LargeAppBar : AppRoute("large_app_bar")
 
+    // Button Demo
+    @Serializable
+    object BasicBtn : AppRoute("basic_btn")
+
+    @Serializable
+    object FilledTonalBtn : AppRoute("filled_tonal_btn")
+
+    @Serializable
+    object FilledTonalIconBtn : AppRoute("filled_tonal_icon_btn")
+
+    @Serializable
+    object FABtn : AppRoute("fa_btn")
+
+    @Serializable
+    object ElevatedBtn : AppRoute("elevated_btn")
+
+    @Serializable
+    object IconBtn : AppRoute("icon_btn")
+
+    @Serializable
+    object OutlinedBtn : AppRoute("outlined_btn")
+
+    @Serializable
+    object TextBtn : AppRoute("text_btn")
+
     // Card Demo
     @Serializable
     object BasicCard : AppRoute("basic_card")
@@ -43,16 +68,47 @@ sealed class AppRoute(val route: String) {
     @Serializable
     object OutlinedCard : AppRoute("outlined_card")
 
+    // Dialog Route
+    @Serializable
+    object DialogBasic : AppRoute("dialog_basic")
+
+    @Serializable
+    object DialogWithText : AppRoute("dialog_text")
+
+    @Serializable
+    object DialogWithImageAndText : AppRoute("dialog_image_text")
+
+    @Serializable
+    object DialogWithTextField : AppRoute("dialog_text_field")
+
+    @Serializable
+    object DialogAlert : AppRoute("dialog_alert")
+
     // Layout Demo
     @Serializable
     object ConstraintLayoutBasic : AppRoute("constraint_layout_basic")
+
+    // Text & Typo Demo
+    @Serializable
+    object BasicText : AppRoute("basic_text")
+
+    @Serializable
+    object MultipleTextStyle : AppRoute("multiple_text_style")
+
+    @Serializable
+    object TextLink : AppRoute("text_link")
+
+
 
     // Splash Route
     @Serializable
     object SplashSample1 : AppRoute("splash_sample_1")
 
-    // Dialog Route
+    // Login Route
     @Serializable
-    object DialogAlert : AppRoute("dialog_alert")
+    object LogIn1 : AppRoute("login_1")
+
+    @Serializable
+    object LogIn2 : AppRoute("login_2")
 
 }

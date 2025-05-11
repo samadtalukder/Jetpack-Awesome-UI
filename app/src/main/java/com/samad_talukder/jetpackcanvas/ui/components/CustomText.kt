@@ -14,7 +14,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
-import com.samad_talukder.jetpackcanvas.ui.theme.GilroyFont
+import com.samad_talukder.jetpackcanvas.ui.theme.NunitoFont
 
 @Composable
 fun CustomText(
@@ -34,7 +34,7 @@ fun CustomText(
         style = TextStyle(
             color = textColor,
             fontSize = fontSize,
-            fontFamily = GilroyFont,
+            fontFamily = NunitoFont,
             fontWeight = fontWeight,
             textAlign = textAlign,
             textDecoration = textDecoration,

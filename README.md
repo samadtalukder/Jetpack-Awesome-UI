@@ -25,7 +25,7 @@ ease.
   Organized structure based on industry-standard practices for maintainable and scalable
   development.
 
-## 🧩 Highlighted UI Component 📝
+## 🧩 Highlighted UI Component
 
 - Animation
 - App Bars
@@ -121,8 +121,7 @@ ease.
 
 Refer to [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed contribution instructions.
 
-## 🌟Contributions are welcome!
-
+## ⭐Star The Repo
 If you find this project helpful, please ⭐️ **star the repo** and share it with your network.  
 Let's help Android developers build beautiful UIs faster, together! 💪
 

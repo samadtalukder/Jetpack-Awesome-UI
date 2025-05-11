@@ -3,6 +3,8 @@
  */
 package com.samad_talukder.jetpackcanvas.utils
 
+import android.content.Context
+import android.widget.Toast
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
@@ -25,6 +27,10 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Bott
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BottomScreens
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BottomSettings
 import com.samad_talukder.jetpackcanvas.ui.screens.settings.SettingsScreen
+
+fun Context.showToast(message: String) {
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+}
 
 fun Modifier.drawDashedBorder(width: Dp, radius: Dp, color: Color) = drawBehind {
     drawIntoCanvas {

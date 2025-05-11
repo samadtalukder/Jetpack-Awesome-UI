@@ -1,4 +1,7 @@
-package com.samad_talukder.jetpackcanvas.ui.login
+/**
+ *  Copyright (C) 2025. Samad Talukder (https://github.com/samadtalukder/)
+ */
+package com.samad_talukder.jetpackcanvas.ui.screens.home.login
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -14,12 +17,12 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.Icon
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -45,21 +48,28 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.samad_talukder.jetpackcanvas.R
-import com.samad_talukder.jetpackcanvas.components.CustomBreak
-import com.samad_talukder.jetpackcanvas.components.CustomEditText
-import com.samad_talukder.jetpackcanvas.components.CustomImage
-import com.samad_talukder.jetpackcanvas.components.CustomText
-import com.samad_talukder.jetpackcanvas.components.SocialLoginBtn
+import com.samad_talukder.jetpackcanvas.ui.components.CustomBreak
+import com.samad_talukder.jetpackcanvas.ui.components.CustomEditText
+import com.samad_talukder.jetpackcanvas.ui.components.CustomImage
+import com.samad_talukder.jetpackcanvas.ui.components.CustomText
+import com.samad_talukder.jetpackcanvas.ui.components.SocialLoginBtn
+import com.samad_talukder.jetpackcanvas.ui.theme.ColorWhite
+import com.samad_talukder.jetpackcanvas.ui.theme.Gray10
+import com.samad_talukder.jetpackcanvas.ui.theme.Gray95
+import com.samad_talukder.jetpackcanvas.ui.theme.Green85
+import com.samad_talukder.jetpackcanvas.ui.theme.Grey40
+import com.samad_talukder.jetpackcanvas.ui.theme.LightGrayBlue
+import com.samad_talukder.jetpackcanvas.ui.theme.UltraLightGray
 
 @Composable
-fun LogInUI_1() {
-    Box(Modifier.background(Color(0xFFF0F1F5))) {
+fun LogInScreen1() {
+    Box(Modifier.background(LightGrayBlue)) {
         Surface(
             modifier = Modifier
                 .fillMaxHeight()
                 .fillMaxWidth()
                 .clipToBounds(),
-            color = (Color(0xFFFCFCFD))
+            color = (UltraLightGray)
         ) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -81,7 +91,6 @@ fun LogInUI_1() {
     }
 }
 
-
 @Composable
 fun HeaderTitleWithIcon() {
     Column(
@@ -99,22 +108,24 @@ fun HeaderTitleWithIcon() {
 
         CustomBreak(height = 30.dp)
 
-        CustomText(
-            value = stringResource(id = R.string.welcome_to_our),
-            textColor = Color(0xFF16162E),
-            fontFamily = FontFamily(Font(R.font.gilroy_bold)),
-            fontWeight = FontWeight(400),
-            textAlign = TextAlign.Center,
-            fontSize = 24.sp
+        Text(
+            text = stringResource(id = R.string.welcome_to_our),
+            style = TextStyle(
+                color = Gray10,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
+                fontSize = 24.sp
+            )
         )
 
-        CustomText(
-            value = stringResource(id = R.string.e_grocery),
-            textColor = Color(0xFF048F6E),
-            fontFamily = FontFamily(Font(R.font.gilroy_bold)),
-            fontWeight = FontWeight(400),
-            textAlign = TextAlign.Center,
-            fontSize = 24.sp
+        Text(
+            text = stringResource(id = R.string.e_grocery),
+            style = TextStyle(
+                color = Green85,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
+                fontSize = 24.sp
+            )
         )
     }
 }
@@ -140,7 +151,7 @@ fun MobileNoInputField() {
                 lineHeight = 14.sp,
                 fontFamily = FontFamily(Font(R.font.gilroy_medium)),
                 fontWeight = FontWeight(400),
-                color = Color(0xFF8B8B97),
+                color = Grey40,
             )
         )
         Spacer(modifier = Modifier.height(10.dp))
@@ -149,9 +160,7 @@ fun MobileNoInputField() {
             value = mobileNo,
             onValueChange = { mobileNo = it },
             placeHolderText = "01XXXXXXX",
-            containerColor = Color(0xFFF7F7F7),
-            textColor = Color(0xFF000000),
-            placeholderColorColor = Color(0xFF8B8B97),
+            containerColor = Gray95,
             roundedCornerShape = RoundedCornerShape(8.dp),
             keyboardType = KeyboardType.Phone
         )
@@ -182,7 +191,7 @@ fun PasswordInputField() {
                 lineHeight = 14.sp,
                 fontFamily = FontFamily(Font(R.font.gilroy_medium)),
                 fontWeight = FontWeight(400),
-                color = Color(0xFF8B8B97),
+                color = Grey40,
             )
         )
         Spacer(modifier = Modifier.height(10.dp))
@@ -191,9 +200,7 @@ fun PasswordInputField() {
             value = password,
             onValueChange = { password = it },
             placeHolderText = stringResource(id = R.string.password_hint_text),
-            containerColor = Color(0xFFF7F7F7),
-            textColor = Color(0xFF000000),
-            placeholderColorColor = Color(0xFF8B8B97),
+            containerColor = Gray95,
             roundedCornerShape = RoundedCornerShape(8.dp),
             keyboardType = KeyboardType.Password,
             trailingIcon = {
@@ -218,7 +225,7 @@ fun PasswordInputField() {
                 lineHeight = 14.sp,
                 fontFamily = FontFamily(Font(R.font.gilroy_medium)),
                 fontWeight = FontWeight(400),
-                color = Color(0xFF16162E),
+                color = Gray10,
             )
         )
 
@@ -240,8 +247,8 @@ fun LoginButton() {
             shape = RoundedCornerShape(15.dp),
             elevation = ButtonDefaults.buttonElevation(8.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(0xFF048F6E),
-                contentColor = Color(0xFFFFFFFF)
+                containerColor = Green85,
+                contentColor = ColorWhite
             )
         ) {
             Text(
@@ -298,7 +305,7 @@ fun SingUpButton() {
                 fontSize = 14.sp,
                 fontFamily = FontFamily(Font(R.font.gilroy_medium)),
                 fontWeight = FontWeight(400),
-                color = Color(0xFF8B8B97),
+                color = Grey40,
             )
         )
         Spacer(modifier = Modifier.width(6.dp))
@@ -308,7 +315,7 @@ fun SingUpButton() {
                 fontSize = 14.sp,
                 fontFamily = FontFamily(Font(R.font.gilroy_bold)),
                 fontWeight = FontWeight(400),
-                color = Color(0xFF048F6E),
+                color = Green85,
             )
         )
     }
@@ -318,5 +325,5 @@ fun SingUpButton() {
 @Preview(showSystemUi = true)
 @Composable
 fun PreviewUI() {
-    LogInUI_1()
+    LogInScreen1()
 }
