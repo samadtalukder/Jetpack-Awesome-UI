@@ -78,6 +78,7 @@ import com.samad_talukder.jetpackcanvas.data.models.HomeCategoryItem
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicCard
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicText
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CenterAlignedTopAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ConstraintLayoutBasic
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CustomTopAppBar
@@ -96,10 +97,12 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Larg
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LogIn1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LogIn2
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.MediumAppBar
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.MultipleTextStyle
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OutlinedBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OutlinedCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.SplashSample1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.TextBtn
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.TextLink
 
 object CommonFunc {
     fun getNavigationItems(): List<BottomNavItem> {
@@ -527,7 +530,20 @@ object CommonFunc {
                 id = "text_typo",
                 title = "Text & Typography",
                 icon = Icons.Default.FormatColorText,
-                items = emptyList()
+                items = listOf(
+                    HomeCategoryItem(
+                        title = "Basic Text Typo",
+                        route = BasicText.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Multiple Text Style",
+                        route = MultipleTextStyle.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Text Link",
+                        route = TextLink.route
+                    ),
+                ),
             ),
 
             HomeCategory(

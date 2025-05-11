@@ -68,10 +68,6 @@ sealed class AppRoute(val route: String) {
     @Serializable
     object OutlinedCard : AppRoute("outlined_card")
 
-    // Layout Demo
-    @Serializable
-    object ConstraintLayoutBasic : AppRoute("constraint_layout_basic")
-
     // Dialog Route
     @Serializable
     object DialogBasic : AppRoute("dialog_basic")
@@ -87,6 +83,22 @@ sealed class AppRoute(val route: String) {
 
     @Serializable
     object DialogAlert : AppRoute("dialog_alert")
+
+    // Layout Demo
+    @Serializable
+    object ConstraintLayoutBasic : AppRoute("constraint_layout_basic")
+
+    // Text & Typo Demo
+    @Serializable
+    object BasicText : AppRoute("basic_text")
+
+    @Serializable
+    object MultipleTextStyle : AppRoute("multiple_text_style")
+
+    @Serializable
+    object TextLink : AppRoute("text_link")
+
+
 
     // Splash Route
     @Serializable
