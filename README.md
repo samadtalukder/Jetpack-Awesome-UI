@@ -100,6 +100,7 @@ ease.
 |----------------------------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------------------------|
 | <img src="screenshots/home-1.png" width="200"/>        | <img src="screenshots/button-1.png" width="200"/> | <img src="screenshots/login_screen-1.png" width="200"/> |
 | <img src="screenshots/home-2.png" width="200"/>        | <img src="screenshots/text-1.png" width="200"/>   | <img src="screenshots/login_screen-2.png" width="200"/> |
+|       |    | <img src="screenshots/foodie_home_screen.png" width="200"/> |
 
 
 ### 🏗️ Build & Run
@@ -120,7 +121,7 @@ ease.
 
 Refer to [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed contribution instructions.
 
-## ⭐Star The Repo
+## ⭐ Star The Repo
 If you find this project helpful, please ⭐️ **star the repo** and share it with your network.  
 Let's help Android developers build beautiful UIs faster, together! 💪
 

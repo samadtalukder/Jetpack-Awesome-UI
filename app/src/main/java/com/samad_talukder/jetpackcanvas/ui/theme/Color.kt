@@ -64,6 +64,16 @@ val LightGrayBackground = Color(0xFFEEEFF2)
 val LightGrayBlue = Color(0xFFF0F1F5)
 val UltraLightGray = Color(0xFFFCFCFD)
 
+val GrayTextColor = Color(0xFF676767)
+val SeeAllTextColor = Color(0xFF333333)
+val PrimaryTextColor = Color(0xFF32343E)
+val OrangeTextColor = Color(0xFFFC6E2A)
+val Brand60 = Color(0xFFFF7622)
+val SecondaryTextColor = Color(0xFF646982)
+val RestaurantTextColor = Color(0xFF181C2E)
+val RestaurantGrayTextColor = Color(0xFFA0A5BA)
+val Black = Color(0xFF000000)
+
 
 
 

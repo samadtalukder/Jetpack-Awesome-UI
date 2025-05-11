@@ -26,6 +26,7 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.button.TextButtonScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.BasicCardScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.FilledCardScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.OutlinedCardScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.dashboard.food.FoodieHomeScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.AlertDialogExample
 import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.DialogBasicScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.DialogWithImageAndTextScreen
@@ -50,6 +51,7 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FABt
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledTonalBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledTonalIconBtn
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FoodieHome
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.IconBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LargeAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LogIn1
@@ -182,7 +184,7 @@ fun AppNavGraph(
             SplashScreen1()
         }
 
-        // Login Screens
+        // Authentication Screens
         composable(LogIn1.route) {
             LogInScreen1()
         }
@@ -190,6 +192,10 @@ fun AppNavGraph(
             LogInScreen2()
         }
 
+        // Dashboard Screens
+        composable(FoodieHome.route) {
+            FoodieHomeScreen()
+        }
 
     }
 }

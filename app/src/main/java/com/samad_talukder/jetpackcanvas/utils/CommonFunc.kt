@@ -92,6 +92,7 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FABt
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledTonalBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledTonalIconBtn
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FoodieHome
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.IconBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LargeAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LogIn1
@@ -670,8 +671,14 @@ object CommonFunc {
             HomeCategory(
                 id = "dashboard",
                 title = "Dashboard",
+                isNew = true,
                 icon = Icons.Default.Dashboard,
-                items = emptyList()
+                items = listOf(
+                    HomeCategoryItem(
+                        title = "Foodie Home Screen",
+                        route = FoodieHome.route
+                    ),
+                ),
             ),
 
             HomeCategory(

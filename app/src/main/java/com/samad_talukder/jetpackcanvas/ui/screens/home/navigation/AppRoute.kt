@@ -98,17 +98,19 @@ sealed class AppRoute(val route: String) {
     @Serializable
     object TextLink : AppRoute("text_link")
 
-
-
     // Splash Route
     @Serializable
     object SplashSample1 : AppRoute("splash_sample_1")
 
-    // Login Route
+    // Authentication Route
     @Serializable
     object LogIn1 : AppRoute("login_1")
 
     @Serializable
     object LogIn2 : AppRoute("login_2")
+
+    // Dashboard Route
+    @Serializable
+    object FoodieHome : AppRoute("foodie_home")
 
 }
