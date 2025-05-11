@@ -20,9 +20,6 @@ import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.samad_talukder.jetpackcanvas.ui.theme.Black70
-import com.samad_talukder.jetpackcanvas.ui.theme.ColorWhite
-import com.samad_talukder.jetpackcanvas.ui.theme.Green85
-import com.samad_talukder.jetpackcanvas.ui.theme.JetpackCanvasTheme
 import com.samad_talukder.jetpackcanvas.ui.theme.Orange_300
 
 @Composable
