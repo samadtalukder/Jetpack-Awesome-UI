@@ -96,12 +96,11 @@ ease.
 
 ## 📸 Screenshot
 
-### Login Screen
+| 📋 Screens                                                     | 🧩 Components                                             | 🎞️ Apps                                                                    |
+|----------------------------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------------------------|
+| <img src="assets/screenshoots/home-1.png" width="200"/>        | <img src="assets/screenshoots/button-1.png" width="200"/> | <img src="assets/screenshoots/screenshots/login_Screen-1.png" width="200"/> |
+| <img src="assets/screenshoots/home-2.png" width="200"/>        | <img src="assets/screenshoots/text-1.png" width="200"/>   | <img src="assets/screenshoots/screenshots/login_Screen-2.png" width="200"/> |
 
-<p align="center">
-  <img src="https://github.com/samadtalukder/Jetpack-Awesome-UI/blob/compose/v1/screenshots/Login_Screen_1.png" alt="Image 1" width="25%" />
-  <img src="https://github.com/samadtalukder/Jetpack-Awesome-UI/blob/compose/v1/screenshots/Login_Screen_2.png" alt="Image 2" width="25%" />
-</p>
 
 ### 🏗️ Build & Run
 
