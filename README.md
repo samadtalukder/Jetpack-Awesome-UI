@@ -96,11 +96,24 @@ ease.
 
 ## 📸 Screenshot
 
-| 📋 Screens                                                     | 🧩 Components                                             | 🎞️ Apps                                                                  |
-|----------------------------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------------------------|
-| <img src="screenshots/home-1.png" width="200"/>        | <img src="screenshots/button-1.png" width="200"/> | <img src="screenshots/login_screen-1.png" width="200"/> <img src="screenshots/login_screen-2.png" width="200"/> |
-| <img src="screenshots/home-2.png" width="200"/>        | <img src="screenshots/text-1.png" width="200"/>   | <img src="screenshots/foodie_home_screen.png" width="200"/> |
+### 📋 Screens
+<div style="display: flex; flex-direction: row; gap: 10px;">
+    <img src="screenshots/home-1.png" width="200"/>
+    <img src="screenshots/home-2.png" width="200"/>
+</div>
 
+### 🧩 Components
+<div style="display: flex; flex-direction: row; gap: 10px;">
+    <img src="screenshots/button-1.png" width="200"/>
+    <img src="screenshots/login_screen-1.png" width="200"/>
+</div>
+
+### 🎞️ Apps
+<div style="display: flex; flex-direction: row; gap: 10px;">
+    <img src="screenshots/login_screen-2.png" width="200"/>
+    <img src="screenshots/text-1.png" width="200"/>
+    <img src="screenshots/foodie_home_screen.png" width="200"/>
+</div>
 
 
 ### 🏗️ Build & Run
