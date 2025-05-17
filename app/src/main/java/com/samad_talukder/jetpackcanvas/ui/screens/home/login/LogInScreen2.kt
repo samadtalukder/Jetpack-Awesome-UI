@@ -16,7 +16,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.Facebook
 import androidx.compose.material.icons.filled.Mail
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
@@ -51,11 +51,11 @@ import com.samad_talukder.jetpackcanvas.ui.components.CustomText
 import com.samad_talukder.jetpackcanvas.ui.components.SocialMediaButton
 import com.samad_talukder.jetpackcanvas.ui.theme.BlueGray95
 import com.samad_talukder.jetpackcanvas.ui.theme.ColorBlack
-import com.samad_talukder.jetpackcanvas.ui.theme.Teal80
 import com.samad_talukder.jetpackcanvas.ui.theme.ColorWhite
 import com.samad_talukder.jetpackcanvas.ui.theme.Grey40
 import com.samad_talukder.jetpackcanvas.ui.theme.Grey60
 import com.samad_talukder.jetpackcanvas.ui.theme.LightGrayBackground
+import com.samad_talukder.jetpackcanvas.ui.theme.Teal80
 
 @Composable
 fun LogInScreen2() {
@@ -175,7 +175,7 @@ fun PasswordTextField(passwordValue: String, onValueChange: (String) -> Unit) {
         hint = stringResource(id = R.string.enter_password),
         containerColor = BlueGray95,
         leadingIcon = {
-            ShowLeadingIcon(Icons.Default.Lock)
+            ShowLeadingIcon(Icons.Default.Facebook)
         },
         trailingIcon = {
             val image =
