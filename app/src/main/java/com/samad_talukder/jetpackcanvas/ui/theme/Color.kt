@@ -73,6 +73,8 @@ val SecondaryTextColor = Color(0xFF646982)
 val RestaurantTextColor = Color(0xFF181C2E)
 val RestaurantGrayTextColor = Color(0xFFA0A5BA)
 val Black = Color(0xFF000000)
+val FurnitureBtnNext = Color(0xFFFE7040)
+val FurnitureUpcoming = Color(0xFFF5F7FB)
 
 
 

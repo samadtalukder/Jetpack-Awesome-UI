@@ -33,6 +33,10 @@ sealed class AppRoute(val route: String) {
     @Serializable
     object LargeAppBar : AppRoute("large_app_bar")
 
+    // Animation Demo
+    @Serializable
+    object BasicAnimation : AppRoute("basic_animation")
+
     // Button Demo
     @Serializable
     object BasicBtn : AppRoute("basic_btn")

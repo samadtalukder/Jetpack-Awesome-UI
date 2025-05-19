@@ -76,6 +76,7 @@ import com.samad_talukder.jetpackcanvas.data.models.BottomNavItem
 import com.samad_talukder.jetpackcanvas.data.models.HomeCategory
 import com.samad_talukder.jetpackcanvas.data.models.HomeCategoryItem
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicAnimation
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicText
@@ -138,11 +139,18 @@ object CommonFunc {
 
     fun getHomeCategories(): List<HomeCategory> {
         return listOf(
+
             HomeCategory(
                 id = "animation",
                 title = "Animation",
                 icon = Icons.Default.Animation,
-                items = emptyList()
+                isNew = true,
+                items = listOf(
+                    HomeCategoryItem(
+                        title = "Basic Animation",
+                        route = BasicAnimation.route
+                    ),
+                )
             ),
 
             HomeCategory(

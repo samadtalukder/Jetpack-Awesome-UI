@@ -4,6 +4,7 @@
 package com.samad_talukder.jetpackcanvas.ui.screens.home.appbars
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -37,20 +38,16 @@ fun CenterAlignedTopAppBarScreen() {
                     Text("John Doe")
                 },
                 navigationIcon = {
-                    IconButton({}) {
-                        Icon(
-                            imageVector = Icons.Filled.ArrowBack,
-                            contentDescription = "menu items"
-                        )
-                    }
+                    Icon(
+                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                        contentDescription = "menu items"
+                    )
                 },
                 actions = {
-                    IconButton(onClick = {}) {
-                        Icon(
-                            imageVector = Icons.Filled.Search,
-                            contentDescription = "Localized description"
-                        )
-                    }
+                    Icon(
+                        imageVector = Icons.Filled.Search,
+                        contentDescription = "Localized description"
+                    )
                 },
             )
         }
