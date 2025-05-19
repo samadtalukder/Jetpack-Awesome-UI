@@ -114,6 +114,10 @@ fun AppNavGraph(
             ModifierAnimationScreen()
         }
 
+        composable(TransitionAnimation.route) {
+            TransitionScreen()
+        }
+
         // Button Components Screen
         composable(BasicBtn.route) {
             BasicButtonScreen { context.showToast("Hello!") }

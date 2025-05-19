@@ -106,6 +106,7 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Outl
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.SplashSample1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.TextBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.TextLink
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.TransitionAnimation
 
 object CommonFunc {
     fun getNavigationItems(): List<BottomNavItem> {
@@ -154,6 +155,10 @@ object CommonFunc {
                     HomeCategoryItem(
                         title = "Modifier.animate",
                         route = ModifierAnimation.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Transition",
+                        route = TransitionAnimation.route
                     ),
                 )
             ),
