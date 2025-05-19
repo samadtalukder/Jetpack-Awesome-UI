@@ -98,6 +98,10 @@ sealed class AppRoute(val route: String) {
     @Serializable
     object ConstraintLayoutBasic : AppRoute("constraint_layout_basic")
 
+    // List Demo
+    @Serializable
+    object OneLineListItem : AppRoute("one_line_list_item")
+
     // Text & Typo Demo
     @Serializable
     object BasicText : AppRoute("basic_text")

@@ -102,6 +102,7 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LogI
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.MediumAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ModifierAnimation
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.MultipleTextStyle
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OneLineListItem
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OutlinedBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OutlinedCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.SplashSample1
@@ -409,8 +410,14 @@ object CommonFunc {
             HomeCategory(
                 id = "list_column",
                 title = "List (Column, Row & Grid)",
+                isNew = true,
                 icon = Icons.Default.ViewComfy,
-                items = emptyList()
+                items = listOf(
+                    HomeCategoryItem(
+                        title = "One Line List Item",
+                        route = OneLineListItem.route
+                    ),
+                ),
             ),
 
             HomeCategory(

@@ -36,6 +36,7 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.DialogWithImageAn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.DialogWithTextFieldScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.DialogWithTextScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.layout.ConstraintLayoutBasicScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.list.OneLineListItemScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.login.LogInScreen1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.login.LogInScreen2
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicAnimation
@@ -63,6 +64,7 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LogI
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.MediumAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ModifierAnimation
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.MultipleTextStyle
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OneLineListItem
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OutlinedCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.SplashSample1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.TextBtn
@@ -183,6 +185,11 @@ fun AppNavGraph(
         // Layout Screens
         composable(ConstraintLayoutBasic.route) {
             ConstraintLayoutBasicScreen()
+        }
+
+        // List Screens
+        composable(OneLineListItem.route) {
+            OneLineListItemScreen()
         }
 
         // Text & Typo Screens
