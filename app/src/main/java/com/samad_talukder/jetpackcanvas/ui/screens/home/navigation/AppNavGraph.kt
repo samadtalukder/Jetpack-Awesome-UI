@@ -12,6 +12,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.samad_talukder.jetpackcanvas.ui.screens.home.animation.BasicAnimationScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.animation.ModifierAnimationScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.CenterAlignedTopAppBarScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.CustomTopAppBarScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.LargeTopAppBarScreen
@@ -59,6 +60,7 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Larg
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LogIn1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LogIn2
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.MediumAppBar
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ModifierAnimation
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.MultipleTextStyle
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OutlinedCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.SplashSample1
@@ -106,6 +108,10 @@ fun AppNavGraph(
         // Animation Components Screen
         composable(BasicAnimation.route) {
             BasicAnimationScreen()
+        }
+
+        composable(ModifierAnimation.route) {
+            ModifierAnimationScreen()
         }
 
         // Button Components Screen

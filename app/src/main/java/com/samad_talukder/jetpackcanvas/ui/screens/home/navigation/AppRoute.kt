@@ -37,6 +37,9 @@ sealed class AppRoute(val route: String) {
     @Serializable
     object BasicAnimation : AppRoute("basic_animation")
 
+    @Serializable
+    object ModifierAnimation : AppRoute("modifier_animation")
+
     // Button Demo
     @Serializable
     object BasicBtn : AppRoute("basic_btn")

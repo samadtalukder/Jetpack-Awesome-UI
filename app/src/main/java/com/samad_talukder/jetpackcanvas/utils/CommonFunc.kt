@@ -99,6 +99,7 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Larg
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LogIn1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LogIn2
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.MediumAppBar
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ModifierAnimation
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.MultipleTextStyle
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OutlinedBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OutlinedCard
@@ -149,6 +150,10 @@ object CommonFunc {
                     HomeCategoryItem(
                         title = "Basic Animation",
                         route = BasicAnimation.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Modifier.animate",
+                        route = ModifierAnimation.route
                     ),
                 )
             ),
