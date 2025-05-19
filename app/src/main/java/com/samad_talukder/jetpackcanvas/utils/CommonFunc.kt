@@ -82,6 +82,7 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Basi
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicText
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CenterAlignedTopAppBar
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CheckoutSample1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ConstraintLayoutBasic
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CustomTopAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogAlert
@@ -690,8 +691,14 @@ object CommonFunc {
             HomeCategory(
                 id = "checkout",
                 title = "Checkout",
+                isNew = true,
                 icon = Icons.Default.ShoppingCartCheckout,
-                items = emptyList()
+                items = listOf(
+                    HomeCategoryItem(
+                        title = "Checkout Sample 1",
+                        route = CheckoutSample1.route
+                    ),
+                )
             ),
 
             HomeCategory(

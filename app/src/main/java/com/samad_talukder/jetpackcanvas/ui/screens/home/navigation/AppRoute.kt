@@ -78,6 +78,10 @@ sealed class AppRoute(val route: String) {
     @Serializable
     object OutlinedCard : AppRoute("outlined_card")
 
+    // Checkout Demo
+    @Serializable
+    object CheckoutSample1 : AppRoute("checkout1_card")
+
     // Dialog Route
     @Serializable
     object DialogBasic : AppRoute("dialog_basic")

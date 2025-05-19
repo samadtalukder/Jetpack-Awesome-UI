@@ -29,6 +29,7 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.button.TextButtonScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.BasicCardScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.FilledCardScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.cards.OutlinedCardScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.checkout.sample1.CheckOutScreen1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.dashboard.food.FoodieHomeScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.AlertDialogExample
 import com.samad_talukder.jetpackcanvas.ui.screens.home.dialog.DialogBasicScreen
@@ -44,6 +45,7 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Basi
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicCard
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.BasicText
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CenterAlignedTopAppBar
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CheckoutSample1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ConstraintLayoutBasic
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.CustomTopAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogAlert
@@ -159,6 +161,11 @@ fun AppNavGraph(
 
         composable(OutlinedCard.route) {
             OutlinedCardScreen()
+        }
+
+        // Checkout Screens
+        composable(CheckoutSample1.route) {
+            CheckOutScreen1()
         }
 
         // Dialog Screens
