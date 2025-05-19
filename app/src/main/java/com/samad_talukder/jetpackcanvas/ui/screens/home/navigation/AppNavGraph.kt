@@ -13,6 +13,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.samad_talukder.jetpackcanvas.ui.screens.home.animation.BasicAnimationScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.animation.ModifierAnimationScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.animation.TransitionScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.CenterAlignedTopAppBarScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.CustomTopAppBarScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.LargeTopAppBarScreen
@@ -66,6 +67,7 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Outl
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.SplashSample1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.TextBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.TextLink
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.TransitionAnimation
 import com.samad_talukder.jetpackcanvas.ui.screens.home.splash.SplashScreen1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.text.BasicTextScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.text.MultipleTextStyleScreen

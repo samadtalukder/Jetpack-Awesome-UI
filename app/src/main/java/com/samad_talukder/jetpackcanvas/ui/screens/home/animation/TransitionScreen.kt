@@ -5,7 +5,6 @@ package com.samad_talukder.jetpackcanvas.ui.screens.home.animation
 
 import androidx.compose.animation.animateColor
 import androidx.compose.animation.core.animateDp
-import androidx.compose.animation.core.animateValue
 import androidx.compose.animation.core.updateTransition
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

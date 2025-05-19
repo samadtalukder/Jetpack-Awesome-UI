@@ -14,6 +14,7 @@ import androidx.compose.material.icons.filled.Animation
 import androidx.compose.material.icons.filled.Aod
 import androidx.compose.material.icons.filled.AppRegistration
 import androidx.compose.material.icons.filled.Apps
+import androidx.compose.material.icons.filled.AreaChart
 import androidx.compose.material.icons.filled.ArrowDropDownCircle
 import androidx.compose.material.icons.filled.AutoAwesomeMotion
 import androidx.compose.material.icons.filled.Bookmark
@@ -287,6 +288,13 @@ object CommonFunc {
             ),
 
             HomeCategory(
+                id = "charts",
+                title = "Charts",
+                icon = Icons.Default.AreaChart,
+                items = emptyList()
+            ),
+
+            HomeCategory(
                 id = "checkbox",
                 title = "Checkbox",
                 icon = Icons.Default.CheckCircle,
@@ -366,7 +374,7 @@ object CommonFunc {
 
             HomeCategory(
                 id = "expansion_panels",
-                title = "Expansion Panels",
+                title = "Expandable List/ Accordion",
                 icon = Icons.Default.Expand,
                 items = emptyList()
             ),
