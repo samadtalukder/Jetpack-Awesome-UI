@@ -78,7 +78,7 @@ fun ModifierAnimationScreen() {
             TweenAnimation()
             SpringAnimation()
             KeyframesAnimation()
-            //RepeatAnimation()
+            RepeatAnimation()
             SnapAnimation()
             AnimateDpAsState()
             AnimateAsFloat()
@@ -326,24 +326,6 @@ fun TweenAnimation() {
             Text("Tween Animation")
         }
     }
-
-}
-
-@Composable
-fun AnimationSpectypes() {
-    var currentState by remember { mutableIntStateOf(0) }
-    val animationSpecs = listOf(
-        "Tween" to tween<Float>(
-            durationMillis = 1000,
-            delayMillis = 100,
-            easing = FastOutSlowInEasing
-        ),
-        "Spring" to spring(
-            dampingRatio = Spring.DampingRatioMediumBouncy,
-            stiffness = Spring.StiffnessLow,
-            visibilityThreshold = 0.01f
-        ),
-    )
 
 }
 
