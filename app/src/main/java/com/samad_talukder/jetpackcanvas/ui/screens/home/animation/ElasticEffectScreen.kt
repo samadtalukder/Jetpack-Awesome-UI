@@ -1,3 +1,6 @@
+/**
+ *  Copyright (C) 2025. Samad Talukder (https://github.com/samadtalukder/)
+ */
 package com.samad_talukder.jetpackcanvas.ui.screens.home.animation
 
 import androidx.compose.animation.core.Animatable
@@ -20,8 +23,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.samad_talukder.jetpackcanvas.ui.theme.ColorWhite
+import com.samad_talukder.jetpackcanvas.ui.theme.Orange_800
 
 @Composable
 fun ElasticEffectScreen() {
@@ -30,7 +34,7 @@ fun ElasticEffectScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFFFA732)),
+            .background(ColorWhite),
         contentAlignment = Alignment.Center
     ) {
         Box(
@@ -52,7 +56,7 @@ fun ElasticEffectScreen() {
                 Icons.Filled.Favorite,
                 contentDescription = "heart",
                 modifier = Modifier.size(animatableOffset.value.dp + 150.dp),
-                tint = Color.Red
+                tint = Orange_800
             )
         }
     }

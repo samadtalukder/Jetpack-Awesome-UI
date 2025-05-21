@@ -1,3 +1,6 @@
+/**
+ *  Copyright (C) 2025. Samad Talukder (https://github.com/samadtalukder/)
+ */
 package com.samad_talukder.jetpackcanvas.ui.screens.home.animation
 
 import androidx.compose.animation.core.Animatable

@@ -1,3 +1,6 @@
+/**
+ *  Copyright (C) 2025. Samad Talukder (https://github.com/samadtalukder/)
+ */
 package com.samad_talukder.jetpackcanvas.ui.screens.home.animation
 
 import androidx.compose.foundation.Canvas
@@ -11,11 +14,16 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.tooling.preview.Preview
+import com.samad_talukder.jetpackcanvas.ui.theme.AccentOrange
+import com.samad_talukder.jetpackcanvas.ui.theme.Brand60
+import com.samad_talukder.jetpackcanvas.ui.theme.Green85
+import com.samad_talukder.jetpackcanvas.ui.theme.Orange_200
+import com.samad_talukder.jetpackcanvas.ui.theme.Orange_400
 import kotlin.math.sin
 
 @Composable
@@ -34,7 +42,7 @@ fun WaveformVisualizerScreen() {
             }
             .background(
                 Brush.verticalGradient(
-                    colors = listOf(Color(0xFF003366), Color.White, Color(0xFF66B2FF))
+                    colors = listOf(Orange_200, White, Orange_400)
                 )
             )
     ) {
@@ -54,7 +62,7 @@ fun WaveformVisualizerScreen() {
         }
 
         val gradient = Brush.horizontalGradient(
-            colors = listOf(Color.Blue, Color.Cyan, Color.Magenta)
+            colors = listOf(AccentOrange, Green85, Brand60)
         )
 
         drawPath(

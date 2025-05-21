@@ -1,3 +1,6 @@
+/**
+ *  Copyright (C) 2025. Samad Talukder (https://github.com/samadtalukder/)
+ */
 package com.samad_talukder.jetpackcanvas.ui.screens.home.animation
 
 import androidx.compose.animation.core.Animatable
@@ -16,11 +19,12 @@ import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.samad_talukder.jetpackcanvas.ui.theme.Grey_800
 
 @Composable
 fun InteractiveScrollTimelineScreen() {
@@ -86,13 +90,13 @@ fun TimelineItem(text: String, alpha: Float) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color.DarkGray.copy(alpha = alpha))
+            .background(Grey_800.copy(alpha = alpha))
             .padding(16.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
             text = text,
-            color = Color.White,
+            color = White,
             modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Center,
             fontSize = 18.sp,
