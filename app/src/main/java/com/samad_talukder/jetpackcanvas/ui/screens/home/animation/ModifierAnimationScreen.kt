@@ -5,6 +5,7 @@ package com.samad_talukder.jetpackcanvas.ui.screens.home.animation
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.FastOutLinearInEasing
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode
@@ -18,7 +19,9 @@ import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.snap
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -29,7 +32,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -38,12 +43,20 @@ import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.samad_talukder.jetpackcanvas.R
 import com.samad_talukder.jetpackcanvas.ui.components.CustomText
 import com.samad_talukder.jetpackcanvas.ui.theme.OrangeTextColor
 import com.samad_talukder.jetpackcanvas.ui.theme.Purple80
@@ -61,16 +74,136 @@ fun ModifierAnimationScreen() {
         item {
             FireForgetAnimation()
             AnimateContentSize()
-            AnimateColor()
-            AnimationSpectypes()
+            ChangeAnimColor()
             TweenAnimation()
             SpringAnimation()
             KeyframesAnimation()
-            RepeatAnimation()
+            //RepeatAnimation()
             SnapAnimation()
+            AnimateDpAsState()
+            AnimateAsFloat()
+            InfiniteRotate()
+            InfiniteAnimation()
+
         }
 
     }
+}
+
+@Composable
+fun InfiniteAnimation() {
+    val infiniteTransition = rememberInfiniteTransition()
+
+    val heartSize by infiniteTransition.animateFloat(
+        initialValue = 100.0f,
+        targetValue = 200.0f,
+        animationSpec = infiniteRepeatable(
+            animation = tween(800, delayMillis = 100, easing = FastOutLinearInEasing),
+            repeatMode = RepeatMode.Reverse
+        )
+    )
+    Image(
+        painter = painterResource(R.drawable.ic_clock),
+        contentDescription = "heart",
+        modifier = Modifier
+            .size(heartSize.dp)
+    )
+}
+
+@Composable
+fun InfiniteRotate() {
+    val infiniteTransition = rememberInfiniteTransition()
+
+    val angle by infiniteTransition.animateFloat(
+        initialValue = 0f,
+        targetValue = 360f,
+        animationSpec = infiniteRepeatable(
+            animation = tween(
+                durationMillis = 2000,
+                easing = LinearEasing
+            ),
+            repeatMode = RepeatMode.Restart
+        )
+    )
+
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
+
+        Image(
+            painter = painterResource(id = R.drawable.ic_furniture_clock),
+            contentDescription = "Rotating Image",
+            modifier = Modifier
+                .size(200.dp)
+                .rotate(angle)
+        )
+    }
+}
+
+@Composable
+fun AnimateAsFloat() {
+    var isRotated by rememberSaveable { mutableStateOf(false) }
+
+    val rotationAngle by animateFloatAsState(
+        targetValue = if (isRotated) 360F else 0f,
+        animationSpec = tween(durationMillis = 500)
+    )
+
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Image(
+            painter = painterResource(R.drawable.ic_furniture_clock),
+            contentDescription = "clock",
+            modifier = Modifier
+                .rotate(rotationAngle)
+                .size(150.dp)
+        )
+
+        Button(
+            onClick = { isRotated = !isRotated },
+            modifier = Modifier
+                .padding(top = 50.dp)
+                .width(200.dp)
+        ) {
+            Text(text = "Rotate")
+        }
+    }
+}
+
+@Composable
+fun AnimateDpAsState() {
+    val isNeedExpansion = rememberSaveable { mutableStateOf(false) }
+
+    val animatedSizeDp: Dp by animateDpAsState(targetValue = if (isNeedExpansion.value) 150.dp else 100.dp)
+
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+
+        CircleImage(animatedSizeDp)
+
+        Button(
+            onClick = {
+                isNeedExpansion.value = !isNeedExpansion.value
+            },
+            modifier = Modifier
+                .padding(top = 50.dp)
+
+        ) {
+            Text(text = "animateDpAsState")
+        }
+    }
+}
+
+@Composable
+fun CircleImage(imageSize: Dp) {
+    Image(
+        painter = painterResource(R.drawable.img_restaurant_bg),
+        contentDescription = "Circle Image",
+        contentScale = ContentScale.Crop,
+        modifier = Modifier
+            .size(imageSize)
+            .clip(CircleShape)
+            .border(5.dp, Color.Gray, CircleShape)
+    )
 }
 
 @Composable
@@ -210,13 +343,12 @@ fun AnimationSpectypes() {
             stiffness = Spring.StiffnessLow,
             visibilityThreshold = 0.01f
         ),
-
-        )
+    )
 
 }
 
 @Composable
-fun AnimateColor() {
+fun ChangeAnimColor() {
     var colorState by remember { mutableStateOf(Teal80) }
 
     val animatedColor by animateColorAsState(

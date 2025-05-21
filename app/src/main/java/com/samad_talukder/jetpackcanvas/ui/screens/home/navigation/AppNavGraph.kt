@@ -12,8 +12,15 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.samad_talukder.jetpackcanvas.ui.screens.home.animation.BasicAnimationScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.animation.DominoEffectScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.animation.ElasticEffectScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.animation.InteractiveScrollTimelineScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.animation.ModifierAnimationScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.animation.ShapeMorphingAnimationScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.animation.SnowfallAnimationScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.animation.StateTransitionScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.animation.TransitionScreen
+import com.samad_talukder.jetpackcanvas.ui.screens.home.animation.WaveformVisualizerScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.CenterAlignedTopAppBarScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.CustomTopAppBarScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.appbars.LargeTopAppBarScreen
@@ -53,6 +60,8 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Dial
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogWithImageAndText
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogWithText
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogWithTextField
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DominoEffect
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ElasticEffect
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ElevatedBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FABtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledCard
@@ -60,6 +69,7 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Fill
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledTonalIconBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FoodieHome
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.IconBtn
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.InteractiveScrollTimeline
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LargeAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LogIn1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LogIn2
@@ -68,10 +78,14 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Modi
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.MultipleTextStyle
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OneLineListItem
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OutlinedCard
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ShapeMorphing
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Snowfall
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.SplashSample1
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.StateTransition
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.TextBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.TextLink
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.TransitionAnimation
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.WaveformVisual
 import com.samad_talukder.jetpackcanvas.ui.screens.home.splash.SplashScreen1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.text.BasicTextScreen
 import com.samad_talukder.jetpackcanvas.ui.screens.home.text.MultipleTextStyleScreen
@@ -122,6 +136,34 @@ fun AppNavGraph(
 
         composable(TransitionAnimation.route) {
             TransitionScreen()
+        }
+
+        composable(DominoEffect.route) {
+            DominoEffectScreen()
+        }
+
+        composable(ElasticEffect.route) {
+            ElasticEffectScreen()
+        }
+
+        composable(InteractiveScrollTimeline.route) {
+            InteractiveScrollTimelineScreen()
+        }
+
+        composable(ShapeMorphing.route) {
+            ShapeMorphingAnimationScreen()
+        }
+
+        composable(Snowfall.route) {
+            SnowfallAnimationScreen()
+        }
+
+        composable(StateTransition.route) {
+            StateTransitionScreen()
+        }
+
+        composable(WaveformVisual.route) {
+            WaveformVisualizerScreen()
         }
 
         // Button Components Screen

@@ -3,7 +3,9 @@
  */
 package com.samad_talukder.jetpackcanvas.ui.screens.home.animation
 
+import androidx.compose.animation.Animatable
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.tween
 import androidx.compose.animation.expandHorizontally
 import androidx.compose.animation.expandIn
 import androidx.compose.animation.expandVertically
@@ -22,12 +24,16 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -37,15 +43,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.samad_talukder.jetpackcanvas.ui.components.CustomText
+import com.samad_talukder.jetpackcanvas.ui.theme.Alert_Error
+import com.samad_talukder.jetpackcanvas.ui.theme.Alert_Success
 import com.samad_talukder.jetpackcanvas.ui.theme.Purple80
+import com.samad_talukder.jetpackcanvas.ui.theme.Teal80
 
 @Composable
 fun BasicAnimationScreen() {
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier.fillMaxSize().padding(20.dp)
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(20.dp)
     ) {
+        AnimatableAnimation()
+
         ShowSimpleAnimation()
 
         FadeInFadeOutAnimation()
@@ -56,6 +69,32 @@ fun BasicAnimationScreen() {
 
         ExpandInShrinkOutAnimation()
 
+    }
+}
+
+@Composable
+fun AnimatableAnimation() {
+    var isAnimated by remember { mutableStateOf(false) }
+    val color = remember { Animatable(Teal80) }
+
+    LaunchedEffect(isAnimated) {
+        color.animateTo(
+            if (isAnimated) Alert_Success else Alert_Error,
+            animationSpec = tween(2000)
+        )
+    }
+
+    Box(
+        Modifier
+            .fillMaxWidth()
+            .height(40.dp)
+            .background(color.value)
+    )
+    Button(
+        onClick = { isAnimated = !isAnimated },
+        modifier = Modifier.padding(top = 10.dp)
+    ) {
+        Text(text = "Animate Color")
     }
 }
 

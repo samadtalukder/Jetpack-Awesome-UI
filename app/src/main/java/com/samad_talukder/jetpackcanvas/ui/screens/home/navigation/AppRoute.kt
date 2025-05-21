@@ -43,6 +43,27 @@ sealed class AppRoute(val route: String) {
     @Serializable
     object TransitionAnimation : AppRoute("transition_animation")
 
+    @Serializable
+    object DominoEffect : AppRoute("domino_effect")
+
+    @Serializable
+    object ElasticEffect : AppRoute("elastic_effect")
+
+    @Serializable
+    object InteractiveScrollTimeline : AppRoute("interactive_scroll")
+
+    @Serializable
+    object ShapeMorphing : AppRoute("shape_morphing")
+
+    @Serializable
+    object Snowfall : AppRoute("snowfall")
+
+    @Serializable
+    object StateTransition : AppRoute("state_transition")
+
+    @Serializable
+    object WaveformVisual : AppRoute("wave_visual")
+
     // Button Demo
     @Serializable
     object BasicBtn : AppRoute("basic_btn")

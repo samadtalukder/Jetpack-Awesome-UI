@@ -90,6 +90,8 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Dial
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogWithImageAndText
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogWithText
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DialogWithTextField
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.DominoEffect
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ElasticEffect
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ElevatedBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FABtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledCard
@@ -97,6 +99,7 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Fill
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FilledTonalIconBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.FoodieHome
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.IconBtn
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.InteractiveScrollTimeline
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LargeAppBar
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LogIn1
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.LogIn2
@@ -106,10 +109,14 @@ import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Mult
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OneLineListItem
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OutlinedBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.OutlinedCard
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.ShapeMorphing
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.Snowfall
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.SplashSample1
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.StateTransition
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.TextBtn
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.TextLink
 import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.TransitionAnimation
+import com.samad_talukder.jetpackcanvas.ui.screens.home.navigation.AppRoute.WaveformVisual
 
 object CommonFunc {
     fun getNavigationItems(): List<BottomNavItem> {
@@ -162,6 +169,34 @@ object CommonFunc {
                     HomeCategoryItem(
                         title = "Transition",
                         route = TransitionAnimation.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Domino Effect",
+                        route = DominoEffect.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Elastic Effect",
+                        route = ElasticEffect.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Interactive Scroll Effect",
+                        route = InteractiveScrollTimeline.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Shape Morphing Effect",
+                        route = ShapeMorphing.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Snowfall Effect",
+                        route = Snowfall.route
+                    ),
+                    HomeCategoryItem(
+                        title = "State Transition Effect",
+                        route = StateTransition.route
+                    ),
+                    HomeCategoryItem(
+                        title = "Wave Form Visual Effect",
+                        route = WaveformVisual.route
                     ),
                 )
             ),
